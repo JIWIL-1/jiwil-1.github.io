@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>게임 기획 포트폴리오</title>
+<meta name="description" content="게임 기획자 포트폴리오">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-top"><span class="doc-title" id="doc-title">포트폴리오</span><span class="doc-meta">자동 저장됨</span></div>
+  <div class="formula" aria-hidden="true"><span class="ref" id="ref">A1</span><span class="fx">fx</span><span class="val" id="val"></span></div>
+</header>
+
+<main class="sheet" id="sheet">
+  <div class="corner"></div>
+  <div class="cols" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span></div>
+  <div class="row-n"></div><div class="loading" id="loading">불러오는 중…</div>
+</main>
+
+<nav class="tabs" aria-label="섹션" id="tabs">
+  <a href="#intro" class="on">소개</a><a href="#projects">프로젝트</a><a href="#skills">역량</a><a href="#about">이력</a><a href="#contact">연락</a>
+</nav>
+
+<div class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="d-title" hidden></div>
+
+<script src="assets/common.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
