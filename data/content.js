@@ -286,77 +286,82 @@ window.PORTFOLIO_CONTENT = {
       {
         "icon": "",
         "name": "Unity",
-        "cat": "제작·디자인"
-      },
-      {
-        "icon": "",
-        "name": "Blender",
-        "cat": "제작·디자인"
-      },
-      {
-        "icon": "",
-        "name": "Figma",
-        "cat": "제작·디자인"
-      },
-      {
-        "icon": "",
-        "name": "Logic Pro",
-        "cat": "제작·디자인"
+        "cat": "게임 엔진·개발"
       },
       {
         "icon": "",
         "name": "VS Code",
-        "cat": "제작·디자인"
+        "cat": "게임 엔진·개발"
       },
       {
         "icon": "",
         "name": "Git",
-        "cat": "제작·디자인"
+        "cat": "게임 엔진·개발"
       },
       {
         "icon": "",
         "name": "GitHub",
-        "cat": "제작·디자인"
+        "cat": "게임 엔진·개발"
+      },
+      {
+        "icon": "",
+        "name": "Blender",
+        "cat": "3D·디자인"
+      },
+      {
+        "icon": "",
+        "name": "Figma",
+        "cat": "3D·디자인"
+      },
+      {
+        "icon": "",
+        "name": "Logic Pro",
+        "cat": "사운드"
+      },
+      {
+        "icon": "",
+        "name": "Suno",
+        "cat": "사운드"
       },
       {
         "icon": "",
         "name": "Word",
-        "cat": "운영·문서"
+        "cat": "문서·기획"
       },
       {
         "icon": "",
         "name": "PowerPoint",
-        "cat": "운영·문서"
+        "cat": "문서·기획"
       },
       {
         "icon": "",
         "name": "Excel",
-        "cat": "운영·문서"
+        "cat": "문서·기획"
       },
       {
         "icon": "",
         "name": "Google 문서",
-        "cat": "운영·문서"
+        "cat": "문서·기획"
       },
       {
         "icon": "",
         "name": "Google 스프레드시트",
-        "cat": "운영·문서"
-      },
-      {
-        "icon": "",
-        "name": "Google 드라이브",
-        "cat": "운영·문서"
+        "cat": "문서·기획"
       },
       {
         "icon": "",
         "name": "Jira",
-        "cat": "운영·문서"
+        "cat": "협업·관리"
       },
       {
         "icon": "",
         "name": "Confluence",
-        "cat": "운영·문서"
+        "cat": "협업·관리"
+      },
+      {
+        "icon": "",
+        "name": "Google 드라이브",
+        "cat": "협업·관리"
       },
       {
         "icon": "",
@@ -381,11 +386,6 @@ window.PORTFOLIO_CONTENT = {
       {
         "icon": "",
         "name": "Gemini",
-        "cat": "AI"
-      },
-      {
-        "icon": "",
-        "name": "Suno",
         "cat": "AI"
       }
     ]
