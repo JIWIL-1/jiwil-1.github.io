@@ -48,10 +48,16 @@ h2{font-size:22px;font-weight:700}
 .sec-head small{color:var(--muted);font-size:13px}
 
 /* 프로젝트 이미지 타일 */
-.ptiles{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--grid)}
-.ptile{position:relative;padding:20px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);margin-bottom:-1px;text-decoration:none;display:block;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .12s;cursor:pointer}
+.ptiles{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--grid);isolation:isolate}
+.ptile{position:relative;padding:20px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);margin-bottom:-1px;text-decoration:none;display:block;background:var(--paper);outline:3px solid transparent;outline-offset:-3px;transition:outline-color .12s,transform .2s ease,box-shadow .2s ease;cursor:pointer}
 .ptile:nth-child(3n){border-right:0}
 .ptile:hover,.ptile:focus-visible{outline-color:var(--sel)}
+.ptile:focus-visible{z-index:1;box-shadow:0 12px 28px rgba(16,124,65,.2)}
+@media (hover:hover) and (pointer:fine){
+  .ptile:hover,.ptile:focus-visible{z-index:1;transform:translateY(-6px) scale(1.025);box-shadow:0 12px 28px rgba(16,124,65,.2)}
+  .ptile:nth-child(3n+1){transform-origin:left center}
+  .ptile:nth-child(3n){transform-origin:right center}
+}
 .ptile .ref{position:absolute;top:3px;left:20px;font-size:11px;color:var(--muted)}
 .pt-body{margin-top:12px}
 .pt-body b{display:block;font-size:18px}
@@ -174,6 +180,7 @@ a.d-file:hover{color:var(--sel)}
   .hero{padding:28px 14px}.hero-inner{padding:24px 20px}
   .hero-inner.has-photo{grid-template-columns:minmax(0,1fr) 120px;gap:20px;align-items:start}
   .ptiles{grid-template-columns:1fr}.ptile{border-right:0}
+  .ptile:hover,.ptile:focus-visible{transform:none}
   .tools{grid-template-columns:1fr}.tcat{grid-column:auto!important}
   .about{grid-template-columns:1fr}.about > div{border-right:0}
   .hide-m{display:none}
@@ -181,6 +188,6 @@ a.d-file:hover{color:var(--sel)}
 }
 /* 데스크톱(16:9 기준 1280px 화면)을 비율 그대로 줄여서 보여줄 때 글자 크기 고정 */
 @media (min-width:900px){.hero h1,.detail .d-title{font-size:64px}.contact a.mail{font-size:34px}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.ptile:hover,.ptile:focus-visible{transform:none}}
 @media (max-width:520px){.hero-inner.has-photo{grid-template-columns:1fr}.hero-photo{order:-1;width:110px}}
 
