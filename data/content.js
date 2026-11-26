@@ -305,7 +305,7 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         "icon": "",
-        "name": "Google 문서",
+        "name": "Word",
         "cat": "운영·문서"
       },
       {
@@ -316,6 +316,16 @@ window.PORTFOLIO_CONTENT = {
       {
         "icon": "",
         "name": "Excel",
+        "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "Google 문서",
+        "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "Google 스프레드시트",
         "cat": "운영·문서"
       },
       {
