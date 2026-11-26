@@ -150,7 +150,7 @@ a.d-file:hover{color:var(--sel)}
 .d-next b{display:block;font-size:28px}
 .d-next:hover b{color:var(--sel)}
 
-@media (max-width:860px){
+@media (max-width:899px){
   .d-meta{grid-template-columns:1fr 1fr}
   .d-hero{height:auto;aspect-ratio:16/10}
   .d-meta div{border-bottom:1px solid var(--grid)}
@@ -162,7 +162,7 @@ a.d-file:hover{color:var(--sel)}
   .d-next{grid-template-columns:110px 1fr}
   .d-count{display:none}
 }
-@media (max-width:760px){
+@media (max-width:899px){
   .sheet{grid-template-columns:28px 1fr}
   .cols{grid-template-columns:repeat(4,1fr)}.cols span:nth-child(n+5){display:none}
   .hero{padding:28px 14px}.hero-inner{padding:24px 20px}
@@ -172,5 +172,7 @@ a.d-file:hover{color:var(--sel)}
   .hide-m{display:none}
   .cell{padding:12px 14px}
 }
+/* 데스크톱(16:9 기준 1280px 화면)을 비율 그대로 줄여서 보여줄 때 글자 크기 고정 */
+@media (min-width:900px){.hero h1,.detail .d-title{font-size:64px}.contact a.mail{font-size:34px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media (max-width:520px){.hero-inner.has-photo{grid-template-columns:1fr}.hero-photo{order:-1;width:110px}}
