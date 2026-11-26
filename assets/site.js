@@ -35,11 +35,11 @@
       <div class="cols" aria-hidden="true">${'ABCDEFGH'.split('').map(c => `<span>${c}</span>`).join('')}</div>
       ${R()}
       <section class="hero" id="intro" data-f="${esc(s.formula || '=기획(재미, 근거, 숫자)')}" data-ref="A1">
-        <div class="hero-inner">
+        <div class="hero-inner${s.photo ? ' has-photo' : ''}"><div class="hero-text">
           <h1>${esc(s.headline || s.name || '').replace(/\n/g, '<br>')}</h1>
           ${s.intro ? `<p>${esc(s.intro)}</p>` : ''}
           <div class="sum">${filled(s.stats).map(x => `<div><b>${esc(x.value)}</b>${esc(x.label)}</div>`).join('')}</div>
-        </div>
+        </div>${s.photo ? `<figure class="hero-photo"><img src="${esc(s.photo)}" alt="${esc(s.name || '')} 사진"></figure>` : ''}</div>
       </section>
       ${R()}
       <div class="cell sec-head" id="projects" data-f="=FILTER(프로젝트, 완성=TRUE)" data-ref="A2"><h2>프로젝트</h2><small>이미지를 누르면 상세 내용이 열려요</small></div>
