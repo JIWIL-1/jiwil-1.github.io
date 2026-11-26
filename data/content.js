@@ -281,32 +281,27 @@ window.PORTFOLIO_CONTENT = {
     }
   ],
   "skills": {
-    "note": "막대는 자기 평가 기준",
+    "note": "",
     "items": [
       {
-        "name": "시스템 기획",
-        "level": 90,
-        "tools": "Excel, 수식 시뮬레이션"
+        "name": "Unity",
+        "level": "",
+        "tools": "SYNC DRIVE 개인 제작, 교수님 좋아하게 돼버렸어! 팀 제작 참여"
       },
       {
-        "name": "레벨 디자인",
-        "level": 82,
-        "tools": "Unity, Tiled"
+        "name": "Blender",
+        "level": "",
+        "tools": "WHO’S TAIL 황금 고블린 제작"
       },
       {
-        "name": "밸런스 설계",
-        "level": 86,
-        "tools": "Excel, Python"
+        "name": "Excel",
+        "level": "",
+        "tools": "WHO’S TAIL 사운드 적용표(45항목) 정리"
       },
       {
-        "name": "내러티브",
-        "level": 70,
-        "tools": "Twine, Notion"
-      },
-      {
-        "name": "문서화·커뮤니케이션",
-        "level": 88,
-        "tools": "Figma, Confluence"
+        "name": "Google 문서",
+        "level": "",
+        "tools": "기획서·작업 정리 문서 작성"
       }
     ]
   },
