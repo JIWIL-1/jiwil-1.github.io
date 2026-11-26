@@ -26,7 +26,7 @@ window.PORTFOLIO_CONTENT = {
       "title": "WHO’S TAIL",
       "kicker": "팀 프로젝트 · 낭만원정대 · 2026",
       "summary": "추격·추리 꼬리잡기 게임 · M1~M2",
-      "cover": "",
+      "cover": "uploads/20261126-151209-t1jv-whostail-cover.webp",
       "lead": "추격과 추리 요소가 결합된 꼬리잡기 게임에서 이벤트 기획과 프로토타입 제작, 사운드 선별·적용을 맡았습니다.",
       "meta": [
         {
