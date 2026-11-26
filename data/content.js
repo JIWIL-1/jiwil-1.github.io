@@ -7,16 +7,16 @@ window.PORTFOLIO_CONTENT = {
     "formula": "=기획(재미, 설계, 전달)",
     "stats": [
       {
-        "value": "3",
-        "label": "완성 프로젝트"
+        "value": "재미 설계",
+        "label": "규칙·이벤트·플레이 흐름 기획"
       },
       {
-        "value": "140+",
-        "label": "밸런스 시트"
+        "value": "기획 전달",
+        "label": "의도와 예외 상황을 문서로 구체화"
       },
       {
-        "value": "60",
-        "label": "설계한 스테이지"
+        "value": "플레이 검증",
+        "label": "직접 테스트하고 개선점 정리"
       }
     ],
     "photo": "uploads/20261126-142017-xr83-profile-photo.webp"
