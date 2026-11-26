@@ -25,11 +25,12 @@
         ${ph(p.cover, i, p.cover ? p.title : '프로젝트 이미지')}
         <div class="pt-body"><b>${esc(p.title)}</b><span>${esc([p.kicker, p.summary].filter(Boolean).join(' · '))}</span></div>
       </a>`).join('');
-    // 사용 가능 도구: 숙련도(0~100)는 선택 — 하나도 없으면 숙련도 열을 숨김
-    const hasLv = v => v !== '' && v != null && !isNaN(+v);
-    const skItems = filled(sk.items), showLv = skItems.some(x => hasLv(x.level));
-    const skills = skItems.map(x => `
-      <tr><td><b>${esc(x.name)}</b></td>${showLv ? `<td class="barcell">${hasLv(x.level) ? `<i class="db" style="width:${Math.max(0, Math.min(100, +x.level))}%"></i><span>${esc(x.level)}</span>` : ''}</td>` : ''}<td>${esc(x.tools)}</td></tr>`).join('');
+    // 사용 가능 도구: 분류별로 묶고, 도구 앞에 아이콘(올린 이미지 또는 첫 글자 배지)
+    const skItems = filled(sk.items).filter(x => (x.name || '').trim()), cats = [];
+    skItems.forEach(x => { const t = (x.cat || '').trim() || '기타'; let g = cats.find(g => g.t === t); if (!g) cats.push(g = { t, items: [] }); g.items.push(x); });
+    const hue = s => [...s].reduce((a, ch) => (a * 31 + ch.charCodeAt(0)) % 360, 7);
+    const toolIcon = x => x.icon ? `<img class="ti ti-img" src="${esc(x.icon)}" alt="">` : `<span class="ti ti-mono" style="--h:${hue(x.name)}" aria-hidden="true">${esc([...x.name.trim()][0].toUpperCase())}</span>`;
+    const skills = cats.map(g => `<div class="tcat"><div class="tcat-h">${esc(g.t)}</div><ul class="tlist">${g.items.map(x => `<li>${toolIcon(x)}<span>${esc(x.name)}</span></li>`).join('')}</ul></div>`).join('');
     const facts = filled(ab.facts).map(f => `<dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd>`).join('');
     const links = filled(ct.links).filter(l => l.url).map(l => `<a href="${esc(PF.safeUrl(l.url))}" target="_blank" rel="noopener">${esc(l.label || l.url)}</a>`).join('');
 
@@ -51,7 +52,7 @@
       ${R()}
       <div class="cell sec-head" id="skills" data-f="=COUNTA(사용가능도구)" data-ref="A4"><h2>사용 가능 도구</h2>${sk.note ? `<small>${esc(sk.note)}</small>` : ''}</div>
       ${R()}
-      <div class="wrap"><table class="skills"><thead><tr><th>도구</th>${showLv ? '<th>숙련도</th>' : ''}<th>사용 경험</th></tr></thead><tbody>${skills}</tbody></table></div>
+      <div class="tools" style="--n:${Math.min(Math.max(cats.length, 1), 4)}">${skills}</div>
       ${R()}
       <div class="cell sec-head" id="about" data-f="=CONCAT(이력, 생각)" data-ref="A6"><h2>소개</h2></div>
       ${R()}
