@@ -295,13 +295,73 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         "icon": "",
-        "name": "Excel",
-        "cat": "운영·문서"
+        "name": "Figma",
+        "cat": "제작·디자인"
+      },
+      {
+        "icon": "",
+        "name": "Logic Pro",
+        "cat": "제작·디자인"
       },
       {
         "icon": "",
         "name": "Google 문서",
         "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "PowerPoint",
+        "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "Excel",
+        "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "Google 드라이브",
+        "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "Jira",
+        "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "Confluence",
+        "cat": "운영·문서"
+      },
+      {
+        "icon": "",
+        "name": "Claude",
+        "cat": "AI"
+      },
+      {
+        "icon": "",
+        "name": "Claude Code",
+        "cat": "AI"
+      },
+      {
+        "icon": "",
+        "name": "ChatGPT",
+        "cat": "AI"
+      },
+      {
+        "icon": "",
+        "name": "Codex",
+        "cat": "AI"
+      },
+      {
+        "icon": "",
+        "name": "Gemini",
+        "cat": "AI"
+      },
+      {
+        "icon": "",
+        "name": "Suno",
+        "cat": "AI"
       }
     ]
   },
