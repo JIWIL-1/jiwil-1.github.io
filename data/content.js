@@ -284,24 +284,24 @@ window.PORTFOLIO_CONTENT = {
     "note": "",
     "items": [
       {
+        "icon": "",
         "name": "Unity",
-        "level": "",
-        "tools": "SYNC DRIVE 개인 제작, 교수님 좋아하게 돼버렸어! 팀 제작 참여"
+        "cat": "제작·디자인"
       },
       {
+        "icon": "",
         "name": "Blender",
-        "level": "",
-        "tools": "WHO’S TAIL 황금 고블린 제작"
+        "cat": "제작·디자인"
       },
       {
+        "icon": "",
         "name": "Excel",
-        "level": "",
-        "tools": "WHO’S TAIL 사운드 적용표(45항목) 정리"
+        "cat": "운영·문서"
       },
       {
+        "icon": "",
         "name": "Google 문서",
-        "level": "",
-        "tools": "기획서·작업 정리 문서 작성"
+        "cat": "운영·문서"
       }
     ]
   },
