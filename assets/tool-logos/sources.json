@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Unity",
+    "file": "assets/tool-logos/unity.svg",
+    "source": "https://unity.com/icon.svg",
+    "brandPage": "https://unity.com/legal/branding-trademarks",
+    "website": "https://unity.com/",
+    "note": "Unmodified official light/dark SVG. Force the surrounding image color-scheme to light for white icon tiles.",
+    "attribution": "This website is not sponsored by or affiliated with Unity Technologies or its affiliates. Unity is a trademark or registered trademark of Unity Technologies or its affiliates in the U.S. and elsewhere.",
+    "bytes": 645,
+    "sha256": "6db4294047b7654ce6885bfe4d7b31b4d0a3848fc7d72fef348b2dbf637373de",
+    "viewBox": "0 0 512 512"
+  },
+  {
+    "name": "VS Code",
+    "file": "assets/tool-logos/vscode.svg",
+    "source": "https://code.visualstudio.com/assets/branding/visual-studio-code-icons.zip",
+    "archivePath": "visual-studio-code-icons/vscode.svg",
+    "brandPage": "https://code.visualstudio.com/brand",
+    "website": "https://code.visualstudio.com/",
+    "bytes": 4451,
+    "sha256": "74ad401c6487a0dc5af1f6b2935556ab2d3553ae45effc7e1697b4d117d046b6",
+    "viewBox": "0 0 100 100"
+  },
+  {
+    "name": "Git",
+    "file": "assets/tool-logos/git.svg",
+    "source": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
+    "brandPage": "https://git-scm.com/community/logos",
+    "website": "https://git-scm.com/",
+    "attribution": "Git logo by Jason Long, licensed under CC BY 3.0.",
+    "license": "https://creativecommons.org/licenses/by/3.0/",
+    "bytes": 858,
+    "sha256": "1080a5430edb6278dc03e4b04efc16c8bed5b943408d648ad721a28836814220",
+    "viewBox": "0 0 78 78"
+  },
+  {
+    "name": "GitHub",
+    "file": "assets/tool-logos/github.svg",
+    "source": "https://brand.github.com/GitHub_Logos.zip",
+    "archivePath": "GitHub Logos/SVG/GitHub_Invertocat_Black.svg",
+    "brandPage": "https://brand.github.com/foundations/logo",
+    "website": "https://github.com/",
+    "bytes": 1559,
+    "sha256": "693d7abe6f899646cc2e96856723b45e95f71885a54910b2749f6decdf7e1ee1",
+    "viewBox": "0 0 98 96"
+  },
+  {
+    "name": "Blender",
+    "file": "assets/tool-logos/blender.svg",
+    "source": "https://raw.githubusercontent.com/blender/blender/main/release/freedesktop/icons/scalable/apps/blender.svg",
+    "brandPage": "https://www.blender.org/about/logo/",
+    "website": "https://www.blender.org/",
+    "note": "Unmodified app icon from the official Blender source repository.",
+    "bytes": 2976,
+    "sha256": "fd18ae29afd0743a6eee912fdfab71476f6da0f6699a16c1ecd7db7ea8a5de59",
+    "viewBox": "0 0 128 128"
+  },
+  {
+    "name": "Figma",
+    "file": "assets/tool-logos/figma.svg",
+    "source": "https://static.figma.com/uploads/4fbf4d754dbbc027ba1530205f8747cd97d532e5",
+    "archivePath": "Figma Brand Assets/Figma Icon (Full-color)/Figma Icon (Full-color).svg",
+    "brandPage": "https://www.figma.com/using-the-figma-brand/",
+    "website": "https://www.figma.com/",
+    "bytes": 646,
+    "sha256": "9798b710e015c7f3fa6101779e323568d6a5a022651d427021262ce850467b07",
+    "viewBox": "0 0 1024 1280",
+    "displayAdjustment": "SVG viewBox trims surrounding padding; symbol geometry and colors unchanged."
+  },
+  {
+    "name": "Word",
+    "file": "assets/tool-logos/word.svg",
+    "source": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/4597900_Word-Badge-1",
+    "brandPage": "https://www.microsoft.com/en-us/microsoft-365/word",
+    "bytes": 6301,
+    "viewBox": "0 0 500 500",
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs",
+    "displayAdjustment": "SVG viewBox trims surrounding padding; symbol geometry and colors unchanged."
+  },
+  {
+    "name": "Excel",
+    "file": "assets/tool-logos/excel.svg",
+    "source": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Excel%20Badge",
+    "brandPage": "https://www.microsoft.com/en-us/microsoft-365/excel",
+    "bytes": 7433,
+    "viewBox": "0 0 500 500",
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs",
+    "displayAdjustment": "SVG viewBox trims surrounding padding; symbol geometry and colors unchanged."
+  },
+  {
+    "name": "PowerPoint",
+    "file": "assets/tool-logos/powerpoint.svg",
+    "source": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/PowerPoint-Badge-2",
+    "brandPage": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+    "bytes": 8477,
+    "viewBox": "0 0 500 500",
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs",
+    "displayAdjustment": "SVG viewBox trims surrounding padding; symbol geometry and colors unchanged."
+  },
+  {
+    "name": "Google 문서",
+    "file": "assets/tool-logos/google-docs.svg",
+    "source": "https://www.gstatic.com/images/branding/productlogos/docs_2026/v2/web/192px.svg",
+    "brandPage": "https://workspace.google.com/products/docs/",
+    "bytes": 2033,
+    "viewBox": "0 0 192 192",
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs"
+  },
+  {
+    "name": "Google 스프레드시트",
+    "file": "assets/tool-logos/google-sheets.svg",
+    "source": "https://www.gstatic.com/images/branding/productlogos/sheets_2026q3/v1/web/192px.svg",
+    "brandPage": "https://workspace.google.com/products/sheets/",
+    "bytes": 1825,
+    "viewBox": "0 0 192 192",
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs"
+  },
+  {
+    "name": "Google 드라이브",
+    "file": "assets/tool-logos/google-drive.svg",
+    "source": "https://www.gstatic.com/images/branding/productlogos/drive_2026/v2/web/192px.svg",
+    "brandPage": "https://workspace.google.com/products/drive/",
+    "bytes": 1293,
+    "viewBox": null,
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs"
+  },
+  {
+    "name": "Jira",
+    "file": "assets/tool-logos/jira.svg",
+    "source": "https://dam-cdn.atl.orangelogic.com/CDNLink/AT14G4B.svg",
+    "brandPage": "https://www.atlassian.com/software/confluence",
+    "bytes": 1045,
+    "viewBox": "0 0 48 48",
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs"
+  },
+  {
+    "name": "Confluence",
+    "file": "assets/tool-logos/confluence.svg",
+    "source": "https://dam-cdn.atl.orangelogic.com/CDNLink/AT14G8X.svg",
+    "brandPage": "https://www.atlassian.com/software/confluence",
+    "bytes": 1612,
+    "viewBox": "0 0 48 48",
+    "validation": "SVG parsed; no scripts, event handlers, foreignObject or external hrefs"
+  },
+  {
+    "tool": "Logic Pro",
+    "localFile": "assets/tool-logos/logic-pro.png",
+    "sourceUrl": "https://www.apple.com/v/logic-pro/n/images/overview/welcome/icon_logic_pro__flnb9hu8o466_large_2x.png",
+    "pageUrl": "https://www.apple.com/logic-pro/",
+    "bytes": 12452,
+    "name": "Logic Pro",
+    "file": "assets/tool-logos/logic-pro.png",
+    "source": "https://www.apple.com/v/logic-pro/n/images/overview/welcome/icon_logic_pro__flnb9hu8o466_large_2x.png",
+    "brandPage": "https://www.apple.com/logic-pro/"
+  },
+  {
+    "tool": "Suno",
+    "localFile": "assets/tool-logos/suno.png",
+    "sourceUrl": "https://cdn-o.suno.com/favicon-192x192.png",
+    "pageUrl": "https://suno.com",
+    "bytes": 39312,
+    "name": "Suno",
+    "file": "assets/tool-logos/suno.png",
+    "source": "https://cdn-o.suno.com/favicon-192x192.png",
+    "brandPage": "https://suno.com"
+  },
+  {
+    "tool": "Claude",
+    "localFile": "assets/tool-logos/claude.svg",
+    "sourceUrl": "https://claude.com/icon.svg",
+    "pageUrl": "https://claude.com",
+    "bytes": 2558,
+    "name": "Claude",
+    "file": "assets/tool-logos/claude.svg",
+    "source": "https://claude.com/icon.svg",
+    "brandPage": "https://claude.com"
+  },
+  {
+    "tool": "Gemini",
+    "localFile": "assets/tool-logos/gemini.png",
+    "sourceUrl": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
+    "pageUrl": "https://gemini.google.com/",
+    "bytes": 61823,
+    "name": "Gemini",
+    "file": "assets/tool-logos/gemini.png",
+    "source": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
+    "brandPage": "https://gemini.google.com/"
+  },
+  {
+    "tool": "Claude Code",
+    "localFile": "assets/tool-logos/claude-code.png",
+    "sourceUrl": "https://anthropic.gallerycdn.vsassets.io/extensions/anthropic/claude-code/2.1.332/1795570450188/Microsoft.VisualStudio.Services.Icons.Default",
+    "pageUrl": "https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code",
+    "note": "Official Anthropic-published Claude Code extension icon.",
+    "bytes": 10358,
+    "name": "Claude Code",
+    "file": "assets/tool-logos/claude-code.png",
+    "source": "https://anthropic.gallerycdn.vsassets.io/extensions/anthropic/claude-code/2.1.332/1795570450188/Microsoft.VisualStudio.Services.Icons.Default",
+    "brandPage": "https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code"
+  },
+  {
+    "tool": "Codex",
+    "localFile": "assets/tool-logos/codex.png",
+    "sourceUrl": "https://openai.gallerycdn.vsassets.io/extensions/openai/chatgpt/26.51120.50957/1795554019796/Microsoft.VisualStudio.Services.Icons.Default",
+    "pageUrl": "https://marketplace.visualstudio.com/items?itemName=openai.chatgpt",
+    "note": "Official OpenAI-published Codex extension icon. The official icon is a white mark: render on a dark background (#111827) to preserve contrast. Do not alter the logo pixels.",
+    "bytes": 10969,
+    "name": "Codex",
+    "file": "assets/tool-logos/codex.png",
+    "source": "https://openai.gallerycdn.vsassets.io/extensions/openai/chatgpt/26.51120.50957/1795554019796/Microsoft.VisualStudio.Services.Icons.Default",
+    "brandPage": "https://marketplace.visualstudio.com/items?itemName=openai.chatgpt"
+  },
+  {
+    "tool": "ChatGPT",
+    "localFile": "assets/tool-logos/chatgpt.png",
+    "sourceUrl": "https://chatgpt.com/cdn/assets/favicon-180x180.9e0103ce69.png",
+    "pageUrl": "https://chatgpt.com",
+    "note": "Official app touch icon; fixed colors preserve visibility on the white portfolio background in dark system themes.",
+    "bytes": 5152,
+    "name": "ChatGPT",
+    "file": "assets/tool-logos/chatgpt.png",
+    "source": "https://chatgpt.com/cdn/assets/favicon-180x180.9e0103ce69.png",
+    "brandPage": "https://chatgpt.com"
+  }
+]

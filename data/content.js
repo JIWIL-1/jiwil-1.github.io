@@ -284,107 +284,107 @@ window.PORTFOLIO_CONTENT = {
     "note": "",
     "items": [
       {
-        "icon": "",
+        "icon": "assets/tool-logos/unity.svg",
         "name": "Unity",
         "cat": "게임 엔진·개발"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/vscode.svg",
         "name": "VS Code",
         "cat": "게임 엔진·개발"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/git.svg",
         "name": "Git",
         "cat": "게임 엔진·개발"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/github.svg",
         "name": "GitHub",
         "cat": "게임 엔진·개발"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/blender.svg",
         "name": "Blender",
         "cat": "3D·디자인"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/figma.svg",
         "name": "Figma",
         "cat": "3D·디자인"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/logic-pro.png",
         "name": "Logic Pro",
         "cat": "사운드"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/suno.png",
         "name": "Suno",
         "cat": "사운드"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/word.svg",
         "name": "Word",
         "cat": "문서·기획"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/powerpoint.svg",
         "name": "PowerPoint",
         "cat": "문서·기획"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/excel.svg",
         "name": "Excel",
         "cat": "문서·기획"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/google-docs.svg",
         "name": "Google 문서",
         "cat": "문서·기획"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/google-sheets.svg",
         "name": "Google 스프레드시트",
         "cat": "문서·기획"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/jira.svg",
         "name": "Jira",
         "cat": "협업·관리"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/confluence.svg",
         "name": "Confluence",
         "cat": "협업·관리"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/google-drive.svg",
         "name": "Google 드라이브",
         "cat": "협업·관리"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/claude.svg",
         "name": "Claude",
         "cat": "AI"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/claude-code.png",
         "name": "Claude Code",
         "cat": "AI"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/chatgpt.png",
         "name": "ChatGPT",
         "cat": "AI"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/codex.png",
         "name": "Codex",
         "cat": "AI"
       },
       {
-        "icon": "",
+        "icon": "assets/tool-logos/gemini.png",
         "name": "Gemini",
         "cat": "AI"
       }

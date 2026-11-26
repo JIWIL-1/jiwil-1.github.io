@@ -29,7 +29,7 @@
     const skItems = filled(sk.items).filter(x => (x.name || '').trim()), cats = [];
     skItems.forEach(x => { const t = (x.cat || '').trim() || '기타'; let g = cats.find(g => g.t === t); if (!g) cats.push(g = { t, items: [] }); g.items.push(x); });
     const hue = s => [...s].reduce((a, ch) => (a * 31 + ch.charCodeAt(0)) % 360, 7);
-    const toolIcon = x => x.icon ? `<img class="ti ti-img" src="${esc(x.icon)}" alt="">` : `<span class="ti ti-mono" style="--h:${hue(x.name)}" aria-hidden="true">${esc([...x.name.trim()][0].toUpperCase())}</span>`;
+    const toolIcon = x => x.icon ? `<img class="ti ti-img" src="${esc(PF.safeUrl(x.icon, true))}" alt="" width="34" height="34" loading="lazy" decoding="async">` : `<span class="ti ti-mono" style="--h:${hue(x.name)}" aria-hidden="true">${esc([...x.name.trim()][0].toUpperCase())}</span>`;
     // 분류 4개까지는 한 줄, 5개 이상은 3열로 여러 줄(마지막 줄 빈칸은 마지막 분류가 채움)
     const tCols = cats.length > 4 ? 3 : Math.max(cats.length, 1), tRem = cats.length % tCols;
     const skills = cats.map((g, i) => `<div class="tcat"${tRem && i === cats.length - 1 ? ` style="grid-column:span ${tCols - tRem + 1}"` : ''}><div class="tcat-h">${esc(g.t)}</div><ul class="tlist">${g.items.map(x => `<li>${toolIcon(x)}<span>${esc(x.name)}</span></li>`).join('')}</ul></div>`).join('');
@@ -52,7 +52,7 @@
       ${R()}
       <div class="ptiles">${tiles}</div>
       ${R()}
-      <div class="cell sec-head" id="skills" data-f="=COUNTA(사용가능도구)" data-ref="A4"><h2>사용 가능 도구</h2>${sk.note ? `<small>${esc(sk.note)}</small>` : ''}</div>
+      <div class="cell sec-head" id="skills" data-f="=COUNTA(사용가능도구)" data-ref="A4"><h2>사용 가능 도구</h2>${sk.note ? `<small>${esc(sk.note)}</small>` : ''}<a class="tool-credits" href="assets/tool-logos/credits.html" target="_blank" rel="noopener">로고 출처</a></div>
       ${R()}
       <div class="tools" style="--n:${tCols}">${skills}</div>
       ${R()}
@@ -180,3 +180,4 @@
     }
   })();
 })();
+
