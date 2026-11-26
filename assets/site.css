@@ -39,6 +39,9 @@ img{max-width:100%}
 .hero .sum{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap}
 .hero .sum div{font-size:13px;color:var(--muted)}
 .hero .sum b{display:block;font-size:26px;color:var(--ink)}
+.hero-inner.has-photo{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:40px;align-items:center;max-width:1040px}
+.hero-photo{margin:0}
+.hero-photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--grid);background:var(--head)}
 
 h2{font-size:22px;font-weight:700}
 .sec-head{display:flex;align-items:baseline;gap:14px;background:var(--sel-soft);flex-wrap:wrap}
@@ -161,6 +164,7 @@ a.d-file:hover{color:var(--sel)}
   .sheet{grid-template-columns:28px 1fr}
   .cols{grid-template-columns:repeat(4,1fr)}.cols span:nth-child(n+5){display:none}
   .hero{padding:28px 14px}.hero-inner{padding:24px 20px}
+  .hero-inner.has-photo{grid-template-columns:1fr;gap:20px}.hero-photo{order:-1;width:120px}
   .ptiles{grid-template-columns:1fr}.ptile{border-right:0}
   .about{grid-template-columns:1fr}.about > div{border-right:0}
   .hide-m{display:none}
