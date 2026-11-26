@@ -395,19 +395,15 @@ window.PORTFOLIO_CONTENT = {
     "facts": [
       {
         "label": "학력",
-        "value": "OO대학교 게임공학과"
+        "value": "가천대학교 경제학과 · 응용통계학과 복수전공"
       },
       {
         "label": "교육",
-        "value": "OO 게임기획 아카데미 수료"
-      },
-      {
-        "label": "수상",
-        "value": "OO 게임잼 2위"
+        "value": "디벨로켓(구 경일게임아카데미)"
       },
       {
         "label": "관심 장르",
-        "value": "로그라이크, 전략, 퍼즐"
+        "value": "MMORPG · FPS"
       }
     ]
   },
