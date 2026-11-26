@@ -25,8 +25,11 @@
         ${ph(p.cover, i, p.cover ? p.title : '프로젝트 이미지')}
         <div class="pt-body"><b>${esc(p.title)}</b><span>${esc([p.kicker, p.summary].filter(Boolean).join(' · '))}</span></div>
       </a>`).join('');
-    const skills = filled(sk.items).map(x => `
-      <tr><td>${esc(x.name)}</td><td class="barcell"><i class="db" style="width:${Math.max(0, Math.min(100, +x.level || 0))}%"></i><span>${esc(x.level)}</span></td><td class="hide-m">${esc(x.tools)}</td></tr>`).join('');
+    // 사용 가능 도구: 숙련도(0~100)는 선택 — 하나도 없으면 숙련도 열을 숨김
+    const hasLv = v => v !== '' && v != null && !isNaN(+v);
+    const skItems = filled(sk.items), showLv = skItems.some(x => hasLv(x.level));
+    const skills = skItems.map(x => `
+      <tr><td><b>${esc(x.name)}</b></td>${showLv ? `<td class="barcell">${hasLv(x.level) ? `<i class="db" style="width:${Math.max(0, Math.min(100, +x.level))}%"></i><span>${esc(x.level)}</span>` : ''}</td>` : ''}<td>${esc(x.tools)}</td></tr>`).join('');
     const facts = filled(ab.facts).map(f => `<dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd>`).join('');
     const links = filled(ct.links).filter(l => l.url).map(l => `<a href="${esc(PF.safeUrl(l.url))}" target="_blank" rel="noopener">${esc(l.label || l.url)}</a>`).join('');
 
@@ -46,9 +49,9 @@
       ${R()}
       <div class="ptiles">${tiles}</div>
       ${R()}
-      <div class="cell sec-head" id="skills" data-f="=AVERAGE(역량)" data-ref="A4"><h2>역량</h2>${sk.note ? `<small>${esc(sk.note)}</small>` : ''}</div>
+      <div class="cell sec-head" id="skills" data-f="=COUNTA(사용가능도구)" data-ref="A4"><h2>사용 가능 도구</h2>${sk.note ? `<small>${esc(sk.note)}</small>` : ''}</div>
       ${R()}
-      <div class="wrap"><table class="skills"><thead><tr><th>분야</th><th>수준</th><th class="hide-m">주로 쓰는 도구</th></tr></thead><tbody>${skills}</tbody></table></div>
+      <div class="wrap"><table class="skills"><thead><tr><th>도구</th>${showLv ? '<th>숙련도</th>' : ''}<th>사용 경험</th></tr></thead><tbody>${skills}</tbody></table></div>
       ${R()}
       <div class="cell sec-head" id="about" data-f="=CONCAT(이력, 생각)" data-ref="A6"><h2>소개</h2></div>
       ${R()}
