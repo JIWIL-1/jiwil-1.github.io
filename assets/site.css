@@ -65,7 +65,7 @@ h2{font-size:22px;font-weight:700}
 }
 .ptile .ref{position:absolute;top:3px;left:20px;font-size:11px;color:var(--muted)}
 .pt-cover{position:relative}
-.pt-open{position:absolute;top:12px;right:12px;width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(16,124,65,.28);border-radius:50%;background:rgba(255,255,255,.52);color:#0B5D31;box-shadow:0 2px 8px rgba(0,0,0,.12);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);pointer-events:none;transition:background-color .16s,color .16s,border-color .16s}
+.pt-open{position:absolute;top:12px;right:12px;width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(16,124,65,.28);border-radius:50%;background:rgba(255,255,255,.44);color:#0B5D31;box-shadow:0 2px 8px rgba(0,0,0,.12);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);pointer-events:none;transition:background-color .16s,color .16s,border-color .16s}
 .pt-open svg{display:block;width:20px;height:20px}
 .ptile:hover .pt-open,.ptile:focus-visible .pt-open{background:var(--sel);border-color:var(--sel);color:var(--paper)}
 .pt-body{margin-top:12px}
