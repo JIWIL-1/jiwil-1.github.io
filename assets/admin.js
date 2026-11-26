@@ -140,6 +140,16 @@
     const draw = () => {
       box.replaceChildren(...arr.map((v, i) => h('div', { class: 'item-row row', style: 'grid-template-columns:' + cols },
         ...fields.map(f => {
+          if (f.type === 'image') {
+            const src = resolve(v[f.key]);
+            const pickBtn = h('button', { type: 'button', class: 'icon-pick', title: src ? '아이콘 바꾸기' : '아이콘 올리기', style: src ? `background-image:url("${src}")` : '', onclick: async () => { const [file] = await pick('image/*'); if (!file || tooBig(file)) return; v[f.key] = 'pending:' + await addPending(file); changed(); draw(); } }, src ? '' : '+');
+            return h('div', { class: 'icon-cell' }, pickBtn, src ? h('button', { type: 'button', class: 'icon-x', title: '아이콘 빼기', onclick: () => { v[f.key] = ''; changed(); draw(); } }, '×') : null);
+          }
+          if (f.type === 'select') {
+            const id = 'dl-' + f.key, inp = h('input', { type: 'text', list: id, placeholder: f.ph || f.label, 'aria-label': f.label }); inp.value = v[f.key] ?? '';
+            inp.addEventListener('input', () => { v[f.key] = inp.value; changed(); });
+            return h('div', {}, inp, h('datalist', { id }, ...f.options.map(o => h('option', { value: o }))));
+          }
           const inp = h('input', { type: f.type || 'text', placeholder: f.ph || f.label, 'aria-label': f.label, min: f.min, max: f.max }); inp.value = v[f.key] ?? '';
           inp.addEventListener('input', () => { v[f.key] = f.type === 'number' ? (inp.value === '' ? '' : +inp.value) : inp.value; changed(); });
           return inp;
@@ -340,9 +350,9 @@
     },
     skills: () => {
       const k = C.skills; k.items = k.items || [];
-      return [...pageHead('사용 가능 도구', '사용할 수 있는 도구와 어디에 써 봤는지 적어 주세요. 숙련도(0~100)는 선택이에요 — 모두 비워 두면 숙련도 칸이 사이트에 보이지 않아요.'),
+      return [...pageHead('사용 가능 도구', '도구 이름과 분류를 적어 주세요. 같은 분류끼리 묶여서 보여요. 아이콘을 올리지 않으면 첫 글자 배지가 자동으로 붙어요.'),
         group('', text(k, 'note', '표 옆 작은 설명'),
-          objList(k.items, '도구 목록', [{ key: 'name', label: '도구' }, { key: 'level', label: '숙련도(선택)', type: 'number', w: '110px', min: 0, max: 100, ph: '0~100' }, { key: 'tools', label: '사용 경험' }], { name: '', level: '', tools: '' }))];
+          objList(k.items, '도구 목록', [{ key: 'icon', label: '아이콘', type: 'image', w: '64px' }, { key: 'name', label: '도구' }, { key: 'cat', label: '분류', type: 'select', w: '160px', options: ['제작·디자인', '운영·문서'] }], { icon: '', name: '', cat: '제작·디자인' }, '분류는 목록에 없는 이름을 직접 입력해도 돼요. 아이콘은 정사각형 PNG가 가장 깔끔해요.'))];
     },
     contact: () => {
       const c = C.contact; c.links = c.links || [];
