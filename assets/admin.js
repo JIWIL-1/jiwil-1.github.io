@@ -308,7 +308,8 @@
           text(s, 'name', '이름'),
           text(s, 'headline', '큰 제목', { multi: true, rows: 2, hint: '줄을 바꾸면 화면에서도 줄이 바뀌어요.' }),
           text(s, 'intro', '소개 문장', { multi: true, rows: 3 }),
-          objList(s.stats, '요약 숫자', [{ key: 'value', label: '숫자', w: '120px' }, { key: 'label', label: '설명' }], { value: '', label: '' }, '3개 정도가 보기 좋아요.')),
+          objList(s.stats, '요약 숫자', [{ key: 'value', label: '숫자', w: '120px' }, { key: 'label', label: '설명' }], { value: '', label: '' }, '3개 정도가 보기 좋아요.'),
+          imageField(s, 'photo', '프로필 사진', '첫 화면 소개 글 오른쪽에 보여요. 세로 3:4 비율 사진이 잘 맞아요. 빼면 사진 없이 보여요.')),
         group('시트 꾸밈',
           text(s, 'docTitle', '맨 위 파일 이름', { hint: '예: 이준엽_게임기획_포트폴리오.xlsx' }),
           text(s, 'formula', '수식 입력줄 문구', { hint: '첫 화면에서 수식 입력줄에 보이는 글이에요. 예: =기획(재미, 근거, 숫자)' }))];
