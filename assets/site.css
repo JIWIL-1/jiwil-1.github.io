@@ -165,12 +165,10 @@ a.d-file:hover{color:var(--sel)}
   .cols{grid-template-columns:repeat(4,1fr)}.cols span:nth-child(n+5){display:none}
   .hero{padding:28px 14px}.hero-inner{padding:24px 20px}
   .hero-inner.has-photo{grid-template-columns:minmax(0,1fr) 120px;gap:20px;align-items:start}
-}
-@media (max-width:520px){
-  .hero-inner.has-photo{grid-template-columns:1fr}.hero-photo{order:-1;width:110px}
   .ptiles{grid-template-columns:1fr}.ptile{border-right:0}
   .about{grid-template-columns:1fr}.about > div{border-right:0}
   .hide-m{display:none}
   .cell{padding:12px 14px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:520px){.hero-inner.has-photo{grid-template-columns:1fr}.hero-photo{order:-1;width:110px}}
