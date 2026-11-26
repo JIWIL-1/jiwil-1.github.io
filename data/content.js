@@ -412,8 +412,8 @@ window.PORTFOLIO_CONTENT = {
     ]
   },
   "contact": {
-    "email": "hello@example.com",
-    "note": "기획서 원본이나 시트 파일이 필요하시면 편하게 연락 주세요.",
+    "email": "jun991014@gmail.com",
+    "note": "© 2026 이준엽. 직접 작성한 글과 기획 문서의 저작권은 이준엽에게 있으며, 외부 자료·에셋·로고·상표의 권리는 각 권리자에게 있습니다.",
     "links": [
       {
         "label": "GitHub",
