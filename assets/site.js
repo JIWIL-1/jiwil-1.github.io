@@ -78,6 +78,20 @@
   }
 
   /* ----- 프로젝트 상세 ----- */
+  // 동영상: 유튜브·비메오·구글 드라이브 링크는 플레이어로, 파일 주소는 video 태그로
+  function videoHTML(u) {
+    u = String(u || '').trim();
+    if (!u) return '';
+    const frame = src => `<div class="d-video"><iframe src="${esc(src)}" title="프로젝트 영상" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>`;
+    let m = u.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/|live\/)|youtu\.be\/)([\w-]{6,})/);
+    if (m) return frame('https://www.youtube-nocookie.com/embed/' + m[1]);
+    m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (m) return frame('https://player.vimeo.com/video/' + m[1]);
+    m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+    if (m) return frame('https://drive.google.com/file/d/' + m[1] + '/preview');
+    const s = PF.safeUrl(u);
+    return s ? `<div class="d-video"><video src="${esc(s)}" controls playsinline preload="metadata"></video></div>` : '';
+  }
   const box = $('#detail');
   let cur = -1, lastFocus = null;
   function detailHTML(i) {
@@ -91,7 +105,7 @@
       <button class="d-btn" data-go="${(i + ps.length - 1) % ps.length}">이전</button>
       <button class="d-btn" data-go="${n}">다음</button></div>` : ''}</div>
     <article class="d-in">
-      ${ph(p.cover, i, p.cover ? p.title : '대표 이미지', 'd-hero')}
+      ${videoHTML(p.video)}
       ${p.kicker ? `<div class="d-kicker">${esc(p.kicker)}</div>` : ''}
       <h2 class="d-title" id="d-title">${esc(p.title)}</h2>
       ${p.lead ? `<p class="d-lead">${esc(p.lead)}</p>` : ''}
