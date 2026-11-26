@@ -186,7 +186,7 @@ window.PORTFOLIO_CONTENT = {
       "title": "교수님 좋아하게 돼버렸어!",
       "kicker": "팀 프로젝트 · 2026",
       "summary": "연애 시뮬레이션 비주얼 노벨 · 7일",
-      "cover": "",
+      "cover": "uploads/20261126-153443-o644-professor-cover.webp",
       "lead": "제미나이·클로드·챗GPT의 특징을 반영한 세 교수 캐릭터와 관계를 쌓는 Unity 비주얼 노벨",
       "meta": [
         {
