@@ -73,9 +73,14 @@ th,td{border-bottom:1px solid var(--grid);border-right:1px solid var(--grid);pad
 th{background:var(--head);font-weight:500;font-size:13px;color:var(--muted)}
 td:last-child,th:last-child{border-right:0}
 .wrap{overflow-x:auto}
-.skills td.barcell{position:relative;width:45%}
-.skills .db{position:absolute;inset:8px auto 8px 8px;background:var(--bar);opacity:.55}
-.skills .db + span{position:relative}
+.tools{display:grid;grid-template-columns:repeat(var(--n,2),minmax(0,1fr));border-bottom:1px solid var(--grid)}
+.tcat{border-right:1px solid var(--grid)}.tcat:last-child{border-right:0}
+.tcat-h{background:var(--head);padding:9px 16px;font-size:13px;font-weight:500;color:var(--muted);border-bottom:1px solid var(--grid)}
+.tlist{list-style:none;margin:0;padding:14px 16px;display:flex;flex-wrap:wrap;gap:12px 28px}
+.tlist li{display:flex;align-items:center;gap:10px;font-weight:700}
+.ti{width:34px;height:34px;border-radius:8px;flex:none}
+.ti-img{display:block;object-fit:contain;background:#fff;border:1px solid var(--grid);padding:3px}
+.ti-mono{display:grid;place-items:center;color:#fff;font-size:16px;font-weight:700;background:hsl(var(--h) 42% 40%)}
 
 .about{display:grid;grid-template-columns:1fr 1fr}
 .about > div{padding:28px 32px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid)}
@@ -168,6 +173,7 @@ a.d-file:hover{color:var(--sel)}
   .hero{padding:28px 14px}.hero-inner{padding:24px 20px}
   .hero-inner.has-photo{grid-template-columns:minmax(0,1fr) 120px;gap:20px;align-items:start}
   .ptiles{grid-template-columns:1fr}.ptile{border-right:0}
+  .tools{grid-template-columns:1fr}.tcat{border-right:0;border-bottom:1px solid var(--grid)}.tcat:last-child{border-bottom:0}
   .about{grid-template-columns:1fr}.about > div{border-right:0}
   .hide-m{display:none}
   .cell{padding:12px 14px}
