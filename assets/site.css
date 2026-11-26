@@ -49,11 +49,9 @@ h2{font-size:22px;font-weight:700}
 
 /* 프로젝트 이미지 타일 */
 .ptiles{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--grid)}
-.ptile{position:relative;padding:20px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);margin-bottom:-1px;text-decoration:none;display:block}
+.ptile{position:relative;padding:20px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);margin-bottom:-1px;text-decoration:none;display:block;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .12s;cursor:pointer}
 .ptile:nth-child(3n){border-right:0}
-.ptile .ph{outline:2px solid transparent;outline-offset:-2px;transition:outline-color .12s}
-.ptile:hover .ph,.ptile:focus-visible .ph{outline-color:var(--sel)}
-.ptile:focus-visible{outline:none}
+.ptile:hover,.ptile:focus-visible{outline-color:var(--sel)}
 .ptile .ref{position:absolute;top:3px;left:20px;font-size:11px;color:var(--muted)}
 .pt-body{margin-top:12px}
 .pt-body b{display:block;font-size:18px}
