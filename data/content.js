@@ -119,7 +119,7 @@ window.PORTFOLIO_CONTENT = {
       "title": "SYNC DRIVE",
       "kicker": "개인 프로젝트 · 2026",
       "summary": "4레인 리듬 레이싱 게임 · 6일",
-      "cover": "uploads/20261125-175000-xra7-syncdrive-cover.webp",
+      "cover": "uploads/20261126-syncdrive-title-v1.jpg",
       "lead": "네온 도쿄의 도로를 달려오는 자동차 노트에 맞춰 D·F·J·K를 누르는 Unity 리듬 레이싱 게임 프로토타입",
       "meta": [
         {
