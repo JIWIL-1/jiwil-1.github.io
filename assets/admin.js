@@ -141,7 +141,7 @@
       box.replaceChildren(...arr.map((v, i) => h('div', { class: 'item-row row', style: 'grid-template-columns:' + cols },
         ...fields.map(f => {
           const inp = h('input', { type: f.type || 'text', placeholder: f.ph || f.label, 'aria-label': f.label, min: f.min, max: f.max }); inp.value = v[f.key] ?? '';
-          inp.addEventListener('input', () => { v[f.key] = f.type === 'number' ? +inp.value : inp.value; changed(); });
+          inp.addEventListener('input', () => { v[f.key] = f.type === 'number' ? (inp.value === '' ? '' : +inp.value) : inp.value; changed(); });
           return inp;
         }), ctrl(arr, i, draw))),
         h('button', { type: 'button', class: 'btn small add-row', onclick: () => { arr.push(JSON.parse(JSON.stringify(blank))); changed(); draw(); } }, '+ 항목 추가'));
@@ -340,9 +340,9 @@
     },
     skills: () => {
       const k = C.skills; k.items = k.items || [];
-      return [...pageHead('역량', '역량 표의 분야, 수준(0~100), 도구예요.'),
+      return [...pageHead('사용 가능 도구', '사용할 수 있는 도구와 어디에 써 봤는지 적어 주세요. 숙련도(0~100)는 선택이에요 — 모두 비워 두면 숙련도 칸이 사이트에 보이지 않아요.'),
         group('', text(k, 'note', '표 옆 작은 설명'),
-          objList(k.items, '역량 목록', [{ key: 'name', label: '분야' }, { key: 'level', label: '수준', type: 'number', w: '90px', min: 0, max: 100, ph: '0~100' }, { key: 'tools', label: '주로 쓰는 도구' }], { name: '', level: 70, tools: '' }))];
+          objList(k.items, '도구 목록', [{ key: 'name', label: '도구' }, { key: 'level', label: '숙련도(선택)', type: 'number', w: '110px', min: 0, max: 100, ph: '0~100' }, { key: 'tools', label: '사용 경험' }], { name: '', level: '', tools: '' }))];
     },
     contact: () => {
       const c = C.contact; c.links = c.links || [];
@@ -426,7 +426,7 @@
   function drawSide() {
     const item = (label, v, i) => h('button', { type: 'button', class: 'item' + (view === v && (i == null || i === curIdx) ? ' on' : ''), onclick: () => go(v, i) }, label);
     $('#side').replaceChildren(
-      h('h3', {}, '사이트'), item('기본 정보', 'site'), item('소개 · 이력', 'about'), item('역량', 'skills'), item('연락처', 'contact'),
+      h('h3', {}, '사이트'), item('기본 정보', 'site'), item('소개 · 이력', 'about'), item('사용 가능 도구', 'skills'), item('연락처', 'contact'),
       h('h3', {}, '프로젝트'), ...C.projects.map((p, i) => item(p.title || `프로젝트 ${i + 1}`, 'project', i)),
       h('button', { type: 'button', class: 'add', onclick: () => { C.projects.push(blankProject()); changed(); go('project', C.projects.length - 1); } }, '+ 프로젝트 추가'),
       h('h3', {}, '설정'), item('GitHub 연결', 'settings'));
