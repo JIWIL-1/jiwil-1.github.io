@@ -39,7 +39,7 @@ img{max-width:100%}
 .hero .sum{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap}
 .hero .sum div{font-size:13px;color:var(--muted)}
 .hero .sum b{display:block;font-size:26px;color:var(--ink)}
-.hero-inner.has-photo{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:40px;align-items:center;max-width:1040px}
+.hero-inner.has-photo{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:48px;align-items:center;max-width:none}
 .hero-photo{margin:0}
 .hero-photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--grid);background:var(--head)}
 
