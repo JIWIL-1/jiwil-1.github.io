@@ -305,6 +305,21 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         "icon": "",
+        "name": "VS Code",
+        "cat": "제작·디자인"
+      },
+      {
+        "icon": "",
+        "name": "Git",
+        "cat": "제작·디자인"
+      },
+      {
+        "icon": "",
+        "name": "GitHub",
+        "cat": "제작·디자인"
+      },
+      {
+        "icon": "",
         "name": "Word",
         "cat": "운영·문서"
       },
