@@ -1,7 +1,9 @@
+@font-face{font-family:'SUIT Variable';src:url('fonts/suit/SUIT-Variable.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
 :root{
   --paper:#FFFFFF; --grid:#D9DEE3; --head:#F1F3F5; --ink:#1D2329; --muted:#5B6570;
   --sel:#107C41; --sel-soft:#E3F2EA; --mark:#FFF2A8; --bar:#7FB89A;
   --font:'IBM Plex Sans KR','Noto Sans CJK KR','Apple SD Gothic Neo',sans-serif;
+  --hero-font:'SUIT Variable','Apple SD Gothic Neo',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -34,8 +36,9 @@ img{max-width:100%}
   linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/12.5% 100%;border-bottom:1px solid var(--grid)}
 .hero-inner{position:relative;background:var(--paper);border:2px solid var(--sel);padding:36px 40px;max-width:880px;box-shadow:4px 4px 0 var(--sel-soft)}
 .hero-inner::after{content:"";position:absolute;right:-6px;bottom:-6px;width:9px;height:9px;background:var(--sel);border:2px solid var(--paper)}
-.hero h1{font-size:clamp(34px,5.4vw,64px);line-height:1.15;font-weight:700;letter-spacing:-.02em}
-.hero p{margin-top:18px;font-size:18px;color:var(--muted);max-width:36em}
+.hero h1,.hero p{font-family:var(--hero-font);-webkit-font-smoothing:antialiased}
+.hero h1{font-size:clamp(30px,4.6vw,56px);line-height:1.22;font-weight:600;letter-spacing:-.035em}
+.hero p{margin-top:18px;font-size:17px;font-weight:400;line-height:1.65;letter-spacing:-.018em;color:var(--muted);max-width:none}
 .hero .sum{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap}
 .hero .sum div{font-size:13px;color:var(--muted)}
 .hero .sum b{display:block;font-size:26px;color:var(--ink)}
@@ -187,7 +190,7 @@ a.d-file:hover{color:var(--sel)}
   .cell{padding:12px 14px}
 }
 /* 데스크톱(16:9 기준 1280px 화면)을 비율 그대로 줄여서 보여줄 때 글자 크기 고정 */
-@media (min-width:900px){.hero h1,.detail .d-title{font-size:64px}.contact a.mail{font-size:34px}}
+@media (min-width:900px){.hero h1{font-size:56px}.detail .d-title{font-size:64px}.contact a.mail{font-size:34px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.ptile:hover,.ptile:focus-visible{transform:none}}
 @media (max-width:520px){.hero-inner.has-photo{grid-template-columns:1fr}.hero-photo{order:-1;width:110px}}
 

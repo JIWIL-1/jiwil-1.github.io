@@ -1,0 +1,26 @@
+{
+  "family": "SUIT Variable",
+  "version": "2.0.5",
+  "publisher": "Sun",
+  "officialWebsite": "https://sun.fo/suit/",
+  "repository": "https://github.com/sun-typeface/SUIT",
+  "release": "https://github.com/sun-typeface/SUIT/releases/tag/v2.0.5",
+  "fontWeight": "100 900",
+  "fontStyle": "normal",
+  "license": "SIL Open Font License 1.1",
+  "reservedFontName": "SUIT",
+  "files": [
+    {
+      "file": "SUIT-Variable.woff2",
+      "source": "https://raw.githubusercontent.com/sun-typeface/SUIT/v2.0.5/fonts/variable/woff2/SUIT-Variable.woff2",
+      "bytes": 624536,
+      "sha256": "aa894a204d5a6fbae259dac6868d350cbd373a390caee0313f92946af741df23"
+    },
+    {
+      "file": "LICENSE.txt",
+      "source": "https://raw.githubusercontent.com/sun-typeface/SUIT/v2.0.5/LICENSE",
+      "bytes": 4380,
+      "sha256": "30d101ee3c35ef629d622d933d261a27b2f60223e0a3b0f36791e569c2b9daa9"
+    }
+  ]
+}
