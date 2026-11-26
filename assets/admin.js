@@ -179,6 +179,24 @@
     draw();
     return wrap;
   }
+  // 동영상 (링크 또는 파일)
+  function videoField(obj, key, label, hint) {
+    const wrap = h('div', { class: 'field' });
+    const draw = () => {
+      const v = obj[key] || '', pending = /^pending:/.test(v);
+      const url = h('input', { type: 'text', placeholder: '유튜브·구글 드라이브·비메오 링크 붙여넣기', 'aria-label': label + ' 주소' });
+      url.value = pending ? '' : v;
+      url.addEventListener('change', () => { obj[key] = url.value.trim(); changed(); draw(); });
+      wrap.replaceChildren(h('div', { class: 'label' }, label),
+        h('div', { class: 'row', style: 'grid-template-columns:1fr auto auto' }, url,
+          h('button', { type: 'button', class: 'btn small', onclick: async () => { const [f] = await pick('video/*'); if (!f || tooBig(f)) return; obj[key] = 'pending:' + await addPending(f); changed(); draw(); } }, '영상 파일 올리기'),
+          v ? h('button', { type: 'button', class: 'btn small danger', onclick: () => { obj[key] = ''; changed(); draw(); } }, '빼기') : null),
+        pending ? h('div', { class: 'hint' }, '올린 영상 파일이 있어요. 저장하면 업로드돼요.') : null,
+        hint ? h('div', { class: 'hint' }, hint) : null);
+    };
+    draw();
+    return wrap;
+  }
   // 이미지 여러 장
   function galleryField(arr, label, hint) {
     const wrap = h('div', { class: 'field' });
@@ -340,8 +358,9 @@
         group('메인 카드',
           text(p, 'title', '프로젝트 이름', { onchange: () => { title.textContent = p.title || '새 프로젝트'; drawSide(); } }),
           h('div', { class: 'row', style: 'grid-template-columns:1fr 1fr' }, text(p, 'kicker', '분류 · 연도', { ph: '예: 팀 프로젝트 · 2025' }), text(p, 'summary', '카드 아래 짧은 설명', { ph: '예: 로그라이크 항해 생존 · 6개월' })),
-          imageField(p, 'cover', '대표 이미지', '카드와 상세 페이지 맨 위에 쓰여요. 가로로 긴 이미지(16:10)가 잘 맞아요.')),
+          imageField(p, 'cover', '대표 이미지', '메인 화면의 프로젝트 카드에 쓰여요. 가로로 긴 이미지(16:10)가 잘 맞아요.')),
         group('상세 페이지 · 개요',
+          videoField(p, 'video', '동영상', '상세 페이지 맨 위에 보여요. 유튜브 링크를 권장해요(25MB가 넘는 파일은 링크로 넣어 주세요). 비워 두면 영상 칸이 보이지 않아요.'),
           text(p, 'lead', '한 줄 소개', { multi: true, rows: 2 }),
           objList(p.meta, '정보 칸', [{ key: 'label', label: '항목', w: '140px', ph: '예: 장르' }, { key: 'value', label: '내용' }], { label: '', value: '' }, '장르, 기간, 팀, 역할, 도구처럼 5칸까지가 한 줄에 보여요.')),
         group('상세 페이지 · 본문',
