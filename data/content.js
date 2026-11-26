@@ -18,7 +18,8 @@ window.PORTFOLIO_CONTENT = {
         "value": "60",
         "label": "설계한 스테이지"
       }
-    ]
+    ],
+    "photo": "uploads/20261126-142017-xr83-profile-photo.webp"
   },
   "projects": [
     {
