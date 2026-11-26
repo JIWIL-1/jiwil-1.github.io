@@ -20,9 +20,12 @@
     let row = 1;
     const R = () => `<div class="row-n">${row++}</div>`;
     const tiles = ps.map((p, i) => `
-      <a class="ptile" href="#project-${i + 1}" data-project="${i}">
+      <a class="ptile" href="#project-${i + 1}" data-project="${i}" aria-label="${esc(p.title)} 상세 보기" aria-haspopup="dialog" aria-controls="detail">
         <span class="ref">${String.fromCharCode(66 + (i % 3) * 2)}${3 + Math.floor(i / 3)}</span>
-        ${ph(p.cover, i, p.cover ? p.title : '프로젝트 이미지')}
+        <div class="pt-cover">
+          ${ph(p.cover, i, p.cover ? p.title : '프로젝트 이미지')}
+          <span class="pt-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
         <div class="pt-body"><b>${esc(p.title)}</b><span>${esc([p.kicker, p.summary].filter(Boolean).join(' · '))}</span></div>
       </a>`).join('');
     // 사용 가능 도구: 분류별로 묶고, 도구 앞에 아이콘(올린 이미지 또는 첫 글자 배지)
@@ -48,7 +51,7 @@
         </div>${s.photo ? `<figure class="hero-photo"><img src="${esc(s.photo)}" alt="${esc(s.name || '')} 사진"></figure>` : ''}</div>
       </section>
       ${R()}
-      <div class="cell sec-head" id="projects" data-f="=FILTER(프로젝트, 완성=TRUE)" data-ref="A2"><h2>프로젝트</h2><small>이미지를 누르면 상세 내용이 열려요</small></div>
+      <div class="cell sec-head" id="projects" data-f="=FILTER(프로젝트, 완성=TRUE)" data-ref="A2"><h2>프로젝트</h2></div>
       ${R()}
       <div class="ptiles">${tiles}</div>
       ${R()}
