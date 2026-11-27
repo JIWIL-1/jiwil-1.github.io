@@ -226,7 +226,13 @@ window.PORTFOLIO_CONTENT = {
       "gallery": [
         "uploads/20261126-153443-o644-professor-cover.webp"
       ],
-      "files": [],
+      "files": [
+        {
+          "name": "회고록",
+          "info": "PDF",
+          "url": "https://drive.google.com/file/d/1Y8J_QZ1kE0CpYuKmBGa5wLupLqfkrdY1/view?usp=drivesdk"
+        }
+      ],
       "scenarioSamples": [
         {
           "src": "uploads/20261127-professor-scenario-day2-scene1.jpg",

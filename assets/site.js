@@ -150,7 +150,9 @@
     const flatFileHTML = files.map(f => f.url
       ? `<a class="d-file" href="${esc(PF.safeUrl(f.url))}" target="_blank" rel="noopener" download>${esc(f.name)}<small>${esc(f.info)}</small></a>`
       : `<div class="d-file">${esc(f.name)}<small>${esc(f.info)}</small></div>`).join('');
-    const attachmentHTML = folderHTML || flatFileHTML;
+    const documentIcon = '<svg class="d-document-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><path d="M14 3v6h6M8 13h8M8 17h6"/></svg>';
+    const standaloneFileHTML = files.filter(f => PF.safeUrl(f.url)).map(f => `<a class="d-standalone-file" href="${esc(PF.safeUrl(f.url))}" target="_blank" rel="noopener">${documentIcon}<span class="d-document-name">${esc(f.name)}</span><small>${esc(f.info)}</small><span class="d-document-arrow" aria-hidden="true">↗</span></a>`).join('');
+    const attachmentHTML = folderHTML + (fileFolders.length ? standaloneFileHTML : flatFileHTML);
     const video = videoHTML(p.video);
     // 영상이 없으면 첫 갤러리 이미지를 상세 상단에 표시합니다.
     const leadImage = video ? '' : PF.safeUrl(gal.shift(), true);
