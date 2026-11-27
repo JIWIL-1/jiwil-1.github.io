@@ -168,25 +168,25 @@ td:last-child,th:last-child{border-right:0}
 .d-task-detail{padding:18px 20px;border:1px solid var(--grid);border-left:3px solid var(--sel);background:#F6FAF7}
 .d-task-detail .rich{word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}
 .d-task-detail .rich h4:first-child{margin-top:0}
-.d-scenarios,.d-backgrounds{margin-top:32px}
-.d-scenarios h4,.d-backgrounds h4{font-size:18px;margin-bottom:12px}
-.d-task-heading::before,.d-scenarios h4::before,.d-backgrounds h4::before{content:"";display:inline-block;width:7px;height:7px;margin-right:9px;vertical-align:3px;background:var(--sel)}
+.d-scenarios,.d-backgrounds,.d-csv{margin-top:32px}
+.d-scenarios h4,.d-backgrounds h4,.d-csv h4{font-size:18px;margin-bottom:12px}
+.d-task-heading::before,.d-scenarios h4::before,.d-backgrounds h4::before,.d-csv h4::before{content:"";display:inline-block;width:7px;height:7px;margin-right:9px;vertical-align:3px;background:var(--sel)}
 .d-task-detail p{text-wrap:balance}
-.d-scenario-grid,.d-background-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
-.d-scenario-grid figure,.d-background-grid figure{min-width:0;margin:0}
-.d-scenario-grid a,.d-background-grid a{display:block;border:1px solid var(--grid);background:#fff}
-.d-scenario-grid a:hover,.d-background-grid a:hover{border-color:var(--sel)}
-.d-scenario-grid a:focus-visible,.d-background-grid a:focus-visible{outline:2px solid var(--sel);outline-offset:3px}
-.d-scenario-grid img,.d-background-grid img{display:block;width:100%;height:auto}
+.d-scenario-grid,.d-background-grid,.d-csv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.d-scenario-grid figure,.d-background-grid figure,.d-csv-grid figure{min-width:0;margin:0}
+.d-scenario-grid a,.d-background-grid a,.d-csv-grid a{display:block;border:1px solid var(--grid);background:#fff}
+.d-scenario-grid a:hover,.d-background-grid a:hover,.d-csv-grid a:hover{border-color:var(--sel)}
+.d-scenario-grid a:focus-visible,.d-background-grid a:focus-visible,.d-csv-grid a:focus-visible{outline:2px solid var(--sel);outline-offset:3px}
+.d-scenario-grid img,.d-background-grid img,.d-csv-grid img{display:block;width:100%;height:auto}
 .d-scenario-grid figcaption{margin-top:8px;text-align:center;font-size:14px;font-weight:600;color:var(--muted)}
-.d-scenarios + ul,.d-backgrounds + ul{margin-top:24px}
+.d-scenarios + ul,.d-backgrounds + ul,.d-csv + ul{margin-top:24px}
 .d-task-detail + ul{margin-top:24px}
-.d-background-grid a{cursor:zoom-in}
-.d-background-grid figcaption{margin-top:8px;text-align:center;word-break:keep-all;color:var(--muted)}
-.d-background-grid figcaption b{display:block;font-size:14px;font-weight:600}
-.d-background-grid figcaption span{display:block;font-size:12px}
-.d-backgrounds .d-task-detail p{text-wrap:wrap}
-@media (max-width:1099px){.d-backgrounds .d-task-detail br{display:none}.d-backgrounds .d-task-detail p{text-wrap:pretty}}
+.d-background-grid a,.d-csv-grid a{cursor:zoom-in}
+.d-background-grid figcaption,.d-csv-grid figcaption{margin-top:8px;text-align:center;word-break:keep-all;color:var(--muted)}
+.d-background-grid figcaption b,.d-csv-grid figcaption b{display:block;font-size:14px;font-weight:600}
+.d-background-grid figcaption span,.d-csv-grid figcaption span{display:block;font-size:12px}
+.d-backgrounds .d-task-detail p,.d-csv .d-task-detail p{text-wrap:wrap}
+@media (max-width:1099px){.d-backgrounds .d-task-detail br,.d-csv .d-task-detail br{display:none}.d-backgrounds .d-task-detail p,.d-csv .d-task-detail p{text-wrap:pretty}}
 .d-sys{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .d-sys div{border:1px solid var(--grid);background:var(--head);padding:16px 18px}
 .d-sys b{display:block;font-size:16px;margin-bottom:2px}

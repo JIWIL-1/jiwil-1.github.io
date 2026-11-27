@@ -219,7 +219,6 @@ window.PORTFOLIO_CONTENT = {
       },
       "taskDetail": "<p>플레이어가 공용공간에서 세 교수를 차례로 만나 성격과 특징을 파악하고, 집에서 각 교수와의 만남을 되짚으며 다음 만남을 준비하는 흐름으로 구성했습니다. 다음 날에는 첫인상을 바탕으로 더 알아가고 싶은 교수를 선택해 해당 장소에서 대화하며 호감도를 쌓고, 관계의 진전에 따라 벚꽃 이벤트와 개인 공간으로 이어지도록 동선을 연결했습니다.</p>",
       "tasks": [
-        "시나리오를 개발 담당자가 제공한 CSV 형식으로 변환하고 담당 파트에 BGM·SFX 데이터 입력",
         "담당 루트의 선택지와 사운드·화면 전환 연출 QA 참여"
       ],
       "systems": [],
@@ -303,7 +302,37 @@ window.PORTFOLIO_CONTENT = {
         }
       ],
       "backgroundDetail": "<p>각 교수의 성격과 개성이 배경에서도 드러나도록 개인 공간의 분위기를 구상하고, <br>상담실·연구실·화방 등의 배경 이미지와 엔딩 CG를 제작했습니다. <br>생성한 배경은 캐릭터 담당 팀원과 함께 그림체와 분위기를 검토하고, <br>팀 피드백을 반영해 수정·추가하며 장면에 어울리도록 스타일을 조율했습니다.</p>",
-      "aiUsage": ""
+      "aiUsage": "",
+      "csvSamples": [
+        {
+          "src": "uploads/20261127-professor-csv-day2.jpg",
+          "label": "2일차",
+          "scene": "공원 수업",
+          "alt": "최미나 2일차 대사와 배경·BGM·효과음 데이터 원본 캡처",
+          "width": 872,
+          "height": 506,
+          "sourceUrl": "https://docs.google.com/spreadsheets/d/1a1RdIROBnXR9Y3BvzQqhjFIE8tGfIr0m/edit"
+        },
+        {
+          "src": "uploads/20261127-professor-csv-day4.jpg",
+          "label": "4일차",
+          "scene": "전시실 방문",
+          "alt": "최미나 4일차 대사와 배경·BGM·효과음 데이터 원본 캡처",
+          "width": 848,
+          "height": 492,
+          "sourceUrl": "https://docs.google.com/spreadsheets/d/11ca-gF5SWq93mZ3wDkqCI--LAYkYm_7W/edit"
+        },
+        {
+          "src": "uploads/20261127-professor-csv-day6.jpg",
+          "label": "6일차",
+          "scene": "저녁 공원",
+          "alt": "최미나 6일차 대사와 배경·BGM·효과음 데이터 원본 캡처",
+          "width": 882,
+          "height": 512,
+          "sourceUrl": "https://docs.google.com/spreadsheets/d/1HuXyVf9mRJbs-tXt4AUyWFNP7XDngLqV/edit"
+        }
+      ],
+      "csvDetail": "<p>개발 담당자가 제공한 CSV 형식에 맞춰 최미나 루트의 대사와 선택지를 정리하고, <br>장면별 상황 묘사와 인물의 반응을 게임에서 사용할 데이터로 옮겼습니다. <br>여기에 담당 장면의 분위기와 행동에 맞는 BGM·SFX 값을 입력해 <br>이야기의 흐름에 따라 배경음악과 효과음이 이어지도록 연출 정보를 구성했습니다.</p>"
     }
   ],
   "skills": {
