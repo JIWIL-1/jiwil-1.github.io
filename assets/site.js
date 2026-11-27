@@ -147,6 +147,8 @@
     const video = videoHTML(p.video);
     // 영상이 없으면 첫 갤러리 이미지를 상세 상단에 표시합니다.
     const leadImage = video ? '' : PF.safeUrl(gal.shift(), true);
+    const taskImage = p.taskImage || {}, taskImageSrc = PF.safeUrl(taskImage.src, true);
+    const taskFigure = taskImageSrc ? `<figure class="d-task-image"><a href="${esc(taskImageSrc)}" target="_blank" rel="noopener" aria-label="${esc(taskImage.caption || '담당 업무 이미지')} 원본 보기"><img src="${esc(taskImageSrc)}" alt="${esc(taskImage.alt || '')}" loading="lazy" decoding="async"></a>${taskImage.caption ? `<figcaption>${esc(taskImage.caption)}</figcaption>` : ''}</figure>` : '';
     return `
     <div class="d-bar"><button class="d-btn" data-close>목록으로</button>
       ${ps.length > 1 ? `<div class="d-nav"><span class="d-count">${i + 1} / ${ps.length}</span>
@@ -160,7 +162,7 @@
       ${meta.length ? `<dl class="d-meta" style="--n:${Math.min(meta.length, 5)}">${meta.map(m => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join('')}</dl>` : ''}
       <div class="d-grid"${files.length ? '' : ' style="grid-template-columns:1fr"'}><div>
         ${sec('기획 의도', rich(p.intent))}
-        ${sec('담당 업무', tasks.length ? `<ul>${tasks.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : '')}
+        ${sec('담당 업무', tasks.length ? `<ul>${tasks.map((t, k) => `<li>${esc(t)}${k === (taskImage.afterTask ?? 0) ? taskFigure : ''}</li>`).join('')}</ul>` : '')}
         ${sec('핵심 시스템', sys.length ? `<div class="d-sys">${sys.map(x => `<div><b>${esc(x.title)}</b><span>${esc(x.desc)}</span></div>`).join('')}</div>` : '')}
         ${sec('결과', res.length ? `<div class="d-nums">${res.map(x => `<div><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join('')}</div>` : '')}
         ${sec('배운 점', rich(p.learned))}

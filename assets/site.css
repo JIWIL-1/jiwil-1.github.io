@@ -158,6 +158,11 @@ td:last-child,th:last-child{border-right:0}
 .d-sec > p,.d-sec .rich{font-size:16px}
 .d-sec > ul{padding-left:20px;font-size:16px}
 .d-sec li{margin:4px 0}
+.d-task-image{margin:14px 0 20px}
+.d-task-image a{display:block;border:1px solid var(--grid);background:#fff;cursor:zoom-in}
+.d-task-image a:focus-visible{outline:2px solid var(--sel);outline-offset:3px}
+.d-task-image img{display:block;width:100%;height:auto}
+.d-task-image figcaption{margin-top:6px;font-size:12px;color:var(--muted)}
 .d-sys{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .d-sys div{border:1px solid var(--grid);background:var(--head);padding:16px 18px}
 .d-sys b{display:block;font-size:16px;margin-bottom:2px}
