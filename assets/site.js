@@ -149,6 +149,8 @@
     const leadImage = video ? '' : PF.safeUrl(gal.shift(), true);
     const taskImage = p.taskImage || {}, taskImageSrc = PF.safeUrl(taskImage.src, true);
     const taskFigure = taskImageSrc ? `<figure class="d-task-image"><a href="${esc(taskImageSrc)}" target="_blank" rel="noopener" aria-label="${esc(taskImage.caption || '담당 업무 이미지')} 원본 보기"><img src="${esc(taskImageSrc)}" alt="${esc(taskImage.alt || '')}" loading="lazy" decoding="async"></a>${taskImage.caption ? `<figcaption>${esc(taskImage.caption)}</figcaption>` : ''}</figure>` : '';
+    const scenarioSamples = filled(p.scenarioSamples).filter(x => PF.safeUrl(x.src, true));
+    const scenarioSection = scenarioSamples.length ? `<section class="d-scenarios" aria-labelledby="scenario-title"><h4 id="scenario-title">최미나 루트 시나리오</h4><div class="d-scenario-grid">${scenarioSamples.map(x => `<figure><a href="${esc(PF.safeUrl(x.url) || PF.safeUrl(x.src, true))}" target="_blank" rel="noopener" aria-label="최미나 ${esc(x.label)} 시나리오 원문 보기"><img src="${esc(PF.safeUrl(x.src, true))}" alt="${esc(x.alt)}" width="420" height="480" loading="lazy" decoding="async"></a><figcaption>${esc(x.label)}</figcaption></figure>`).join('')}</div>${p.scenarioDetail ? `<div class="d-task-detail">${rich(p.scenarioDetail)}</div>` : ''}</section>` : '';
     return `
     <div class="d-bar"><button class="d-btn" data-close>목록으로</button>
       ${ps.length > 1 ? `<div class="d-nav"><span class="d-count">${i + 1} / ${ps.length}</span>
@@ -162,7 +164,7 @@
       ${meta.length ? `<dl class="d-meta" style="--n:${Math.min(meta.length, 5)}">${meta.map(m => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join('')}</dl>` : ''}
       <div class="d-grid"${files.length ? '' : ' style="grid-template-columns:1fr"'}><div>
         ${sec('기획 의도', rich(p.intent))}
-        ${sec('담당 업무', taskFigure + (p.taskDetail ? `<div class="d-task-detail">${rich(p.taskDetail)}</div>` : '') + (tasks.length ? `<ul>${tasks.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''))}
+        ${sec('담당 업무', taskFigure + (p.taskDetail ? `<div class="d-task-detail">${rich(p.taskDetail)}</div>` : '') + scenarioSection + (tasks.length ? `<ul>${tasks.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''))}
         ${sec('핵심 시스템', sys.length ? `<div class="d-sys">${sys.map(x => `<div><b>${esc(x.title)}</b><span>${esc(x.desc)}</span></div>`).join('')}</div>` : '')}
         ${sec('결과', res.length ? `<div class="d-nums">${res.map(x => `<div><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join('')}</div>` : '')}
         ${sec('배운 점', rich(p.learned))}

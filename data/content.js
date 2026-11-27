@@ -216,9 +216,8 @@ window.PORTFOLIO_CONTENT = {
         "alt": "플레이어 동선도: 집과 캠퍼스에서 캐릭터별 만남 장소, 개인 공간과 엔딩으로 이어지는 흐름",
         "caption": ""
       },
-      "taskDetail": "<p>공용공간에서 세 교수를 차례로 만나 성격과 특징을 파악한 뒤, 집에서 각 교수와의 만남을 되짚도록 구성했습니다. 다음 날에는 첫 만남의 인상을 바탕으로 더 알아가고 싶은 교수를 선택하고, 해당 장소에서 대화하며 호감도를 쌓게 했습니다. 이후 호감도에 따라 벚꽃 이벤트와 개인 공간으로 이어지는 진행 흐름을 정리했습니다.</p>",
+      "taskDetail": "<p>공용공간에서 세 교수를 차례로 만나 각 캐릭터의 성격과 특징을 파악합니다.<br>집에서 각 교수와의 만남을 되짚고, 첫인상을 바탕으로 다음 만남을 준비합니다.<br>다음 날 원하는 교수를 선택해 해당 장소에서 대화하며 호감도를 쌓습니다.<br>이후 호감도에 따라 벚꽃 이벤트와 개인 공간으로 이어지는 동선을 구성했습니다.</p>",
       "tasks": [
-        "최미나 루트 2·4·6·7일차 시나리오 작성 (상황 묘사, 대사, 선택지별 반응과 일부 호감도 수치)",
         "AI를 활용한 배경 이미지 제작과 엔딩 CG 생성, 캐릭터 담당 팀원과 스타일 조율",
         "시나리오를 개발 담당자가 제공한 CSV 형식으로 변환하고 담당 파트에 BGM·SFX 데이터 입력",
         "담당 루트의 선택지와 사운드·화면 전환 연출 QA 참여"
@@ -283,7 +282,28 @@ window.PORTFOLIO_CONTENT = {
           "info": "PDF",
           "url": "https://drive.google.com/file/d/17SqV2sObP2pvhKIcGfjfY1NSNBUAWwzy/view"
         }
-      ]
+      ],
+      "scenarioSamples": [
+        {
+          "src": "uploads/20261127-professor-scenario-day2.jpg",
+          "alt": "최미나 2일차 시나리오 도입부: 공원에서 시작하는 만남",
+          "label": "2일차",
+          "url": "https://docs.google.com/document/d/1fC4sTi64DXSMM2i3NIenhXU_lKHFHW2_/edit"
+        },
+        {
+          "src": "uploads/20261127-professor-scenario-day4.jpg",
+          "alt": "최미나 4일차 시나리오 도입부: 개인 전시실로 초대하는 메시지",
+          "label": "4일차",
+          "url": "https://docs.google.com/document/d/1Za6kYKtVUNHNFandeJpm_10qM62AMMCu/edit"
+        },
+        {
+          "src": "uploads/20261127-professor-scenario-day6.jpg",
+          "alt": "최미나 6일차 시나리오 도입부: 늦은 저녁 공원 데이트",
+          "label": "6일차",
+          "url": "https://docs.google.com/document/d/1ptk5tBvCaxzlFsS3lIPljiWtF17Dbxr0/edit"
+        }
+      ],
+      "scenarioDetail": "<p>최미나의 2·4·6·7일차 시나리오를 맡아 장면별 상황과 대사, 행동을 작성했습니다.<br>공원 수업과 전시 준비를 함께하며 서로를 알아가고 가까워지는 과정을 구성했습니다.<br>AI 예술을 둘러싼 갈등이 서로의 관점을 이해하는 대화로 이어지도록 했습니다.<br>2·4일차에는 선택지별 반응과 호감도 수치를 정리해 대화와 진행 분기를 구체화했습니다.</p>"
     }
   ],
   "skills": {

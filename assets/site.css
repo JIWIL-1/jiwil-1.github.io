@@ -164,7 +164,18 @@ td:last-child,th:last-child{border-right:0}
 .d-task-image img{display:block;width:100%;height:auto}
 .d-task-image figcaption{margin-top:6px;font-size:12px;color:var(--muted)}
 .d-task-detail{padding:18px 20px;border:1px solid var(--grid);border-left:3px solid var(--sel);background:#F6FAF7}
+.d-task-detail .rich{word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}
 .d-task-detail .rich h4:first-child{margin-top:0}
+.d-scenarios{margin-top:32px}
+.d-scenarios h4{font-size:18px;margin-bottom:12px}
+.d-scenario-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.d-scenario-grid figure{min-width:0;margin:0}
+.d-scenario-grid a{display:block;border:1px solid var(--grid);background:#fff}
+.d-scenario-grid a:hover{border-color:var(--sel)}
+.d-scenario-grid a:focus-visible{outline:2px solid var(--sel);outline-offset:3px}
+.d-scenario-grid img{display:block;width:100%;height:auto}
+.d-scenario-grid figcaption{margin-top:8px;text-align:center;font-size:14px;font-weight:600;color:var(--muted)}
+.d-scenarios + ul{margin-top:24px}
 .d-task-detail + ul{margin-top:24px}
 .d-sys{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .d-sys div{border:1px solid var(--grid);background:var(--head);padding:16px 18px}
