@@ -37,7 +37,8 @@ img{max-width:100%}
 .hero-inner{position:relative;background:var(--paper);border:2px solid var(--sel);padding:36px 40px;max-width:880px;box-shadow:4px 4px 0 var(--sel-soft)}
 .hero-inner::after{content:"";position:absolute;right:-6px;bottom:-6px;width:9px;height:9px;background:var(--sel);border:2px solid var(--paper)}
 .hero h1,.hero p{font-family:var(--hero-font);-webkit-font-smoothing:antialiased}
-.hero h1{font-size:clamp(30px,4.6vw,56px);line-height:1.22;font-weight:600;letter-spacing:-.035em}
+.hero-text{min-width:0;container-type:inline-size}
+.hero h1{font-size:clamp(30px,4vw,42px);font-size:clamp(30px,5cqi,42px);line-height:1.25;font-weight:600;letter-spacing:-.035em}
 .hero p{margin-top:18px;font-size:17px;font-weight:400;line-height:1.65;letter-spacing:-.018em;color:var(--muted);max-width:none}
 .hero .sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:30px;padding-top:22px;border-top:1px solid var(--grid);font-family:var(--hero-font)}
 .hero .sum > div{padding:0 20px;border-right:1px solid var(--grid);font-size:14px;line-height:1.65;color:var(--muted)}
@@ -205,7 +206,7 @@ a.d-file:hover{color:var(--sel)}
   .cell{padding:12px 14px}
 }
 /* 데스크톱(16:9 기준 1280px 화면)을 비율 그대로 줄여서 보여줄 때 글자 크기 고정 */
-@media (min-width:900px){.hero h1{font-size:56px}.detail .d-title{font-size:64px}.contact a.mail{font-size:34px}}
+@media (min-width:900px){.hero h1{font-size:42px}.detail .d-title{font-size:64px}.contact a.mail{font-size:34px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.ptile:hover,.ptile:focus-visible{transform:none}}
 @media (max-width:520px){.hero-inner.has-photo{grid-template-columns:1fr}.hero-photo{order:-1;width:110px}}
 
