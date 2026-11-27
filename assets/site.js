@@ -21,7 +21,6 @@
     const R = () => `<div class="row-n">${row++}</div>`;
     const tiles = ps.map((p, i) => `
       <a class="ptile" href="#project-${i + 1}" data-project="${i}" aria-label="${esc(p.title)} 상세 보기" aria-haspopup="dialog" aria-controls="detail">
-        <span class="ref">${String.fromCharCode(66 + (i % 3) * 2)}${4 + Math.floor(i / 3)}</span>
         <div class="pt-cover">
           ${ph(p.cover, i, p.cover ? p.title : '프로젝트 이미지')}
           <span class="pt-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
