@@ -162,7 +162,7 @@
       ${meta.length ? `<dl class="d-meta" style="--n:${Math.min(meta.length, 5)}">${meta.map(m => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join('')}</dl>` : ''}
       <div class="d-grid"${files.length ? '' : ' style="grid-template-columns:1fr"'}><div>
         ${sec('기획 의도', rich(p.intent))}
-        ${sec('담당 업무', tasks.length ? `<ul>${tasks.map((t, k) => `<li>${esc(t)}${k === (taskImage.afterTask ?? 0) ? taskFigure : ''}</li>`).join('')}</ul>` : '')}
+        ${sec('담당 업무', taskFigure + (p.taskDetail ? `<div class="d-task-detail">${rich(p.taskDetail)}</div>` : '') + (tasks.length ? `<ul>${tasks.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''))}
         ${sec('핵심 시스템', sys.length ? `<div class="d-sys">${sys.map(x => `<div><b>${esc(x.title)}</b><span>${esc(x.desc)}</span></div>`).join('')}</div>` : '')}
         ${sec('결과', res.length ? `<div class="d-nums">${res.map(x => `<div><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join('')}</div>` : '')}
         ${sec('배운 점', rich(p.learned))}
