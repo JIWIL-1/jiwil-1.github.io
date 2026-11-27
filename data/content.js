@@ -289,16 +289,6 @@ window.PORTFOLIO_CONTENT = {
         "cat": "게임 엔진·개발"
       },
       {
-        "icon": "assets/tool-logos/vscode.svg",
-        "name": "VS Code",
-        "cat": "게임 엔진·개발"
-      },
-      {
-        "icon": "assets/tool-logos/git.svg",
-        "name": "Git",
-        "cat": "게임 엔진·개발"
-      },
-      {
         "icon": "assets/tool-logos/github.svg",
         "name": "GitHub",
         "cat": "게임 엔진·개발"
