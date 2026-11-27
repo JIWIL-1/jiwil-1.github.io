@@ -24,8 +24,8 @@ window.PORTFOLIO_CONTENT = {
   "projects": [
     {
       "title": "WHO’S TAIL",
-      "kicker": "팀 프로젝트 · 낭만원정대 · 2026",
-      "summary": "추격·추리 꼬리잡기 게임 · M1~M2",
+      "kicker": "팀 프로젝트 · 2026.09~12",
+      "summary": "추격·추리 꼬리잡기",
       "cover": "uploads/20261126-151209-t1jv-whostail-cover.webp",
       "lead": "추격과 추리 요소가 결합된 꼬리잡기 게임에서 이벤트 기획과 프로토타입 제작, 사운드 선별·적용을 맡았습니다.",
       "meta": [
@@ -117,8 +117,8 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "title": "SYNC DRIVE",
-      "kicker": "개인 프로젝트 · 2026",
-      "summary": "4레인 리듬 레이싱 게임 · 6일",
+      "kicker": "개인 프로젝트 · 2026.09",
+      "summary": "리듬 레이싱",
       "cover": "uploads/20261126-syncdrive-selected.jpg",
       "lead": "네온 도쿄의 도로를 달려오는 자동차 노트에 맞춰 D·F·J·K를 누르는 Unity 리듬 레이싱 게임 프로토타입",
       "meta": [
@@ -184,8 +184,8 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "title": "교수님 좋아하게 돼버렸어!",
-      "kicker": "팀 프로젝트 · 2026",
-      "summary": "연애 시뮬레이션 비주얼 노벨 · 7일",
+      "kicker": "팀 프로젝트 · 2026.04",
+      "summary": "연애 시뮬레이션",
       "cover": "uploads/20261126-153443-o644-professor-cover.webp",
       "lead": "제미나이·클로드·챗GPT의 특징을 반영한 세 교수 캐릭터와 관계를 쌓는 Unity 비주얼 노벨",
       "meta": [
