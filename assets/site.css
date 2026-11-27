@@ -156,6 +156,8 @@ td:last-child,th:last-child{border-right:0}
 .d-sec + .d-sec{margin-top:38px}
 .d-sec h3{font-size:22px;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid var(--sel-soft)}
 .d-in-large-headings .d-sec h3{font-size:28px;line-height:1.35}
+.d-in-large-headings .d-sec + .d-sec{margin-top:64px}
+.d-in-large-headings :is(.d-scenarios,.d-backgrounds,.d-csv,.d-qa){margin-top:48px}
 .d-sec > p,.d-sec .rich{font-size:16px}
 .d-ai-usage .rich p{text-wrap:pretty;overflow-wrap:break-word}
 .d-sec > ul{padding-left:20px;font-size:16px}
@@ -210,6 +212,8 @@ a.d-file:hover{color:var(--sel)}
 
 @media (max-width:899px){
   .d-in-large-headings .d-sec h3{font-size:26px}
+  .d-in-large-headings .d-sec + .d-sec{margin-top:48px}
+  .d-in-large-headings :is(.d-scenarios,.d-backgrounds,.d-csv,.d-qa){margin-top:40px}
   .d-meta{grid-template-columns:1fr 1fr}
   .d-hero{height:auto;aspect-ratio:16/10}
   .d-meta div{border-bottom:1px solid var(--grid)}
