@@ -155,6 +155,7 @@ td:last-child,th:last-child{border-right:0}
 .d-grid{display:grid;grid-template-columns:1fr 290px;gap:48px;margin-top:44px}
 .d-sec + .d-sec{margin-top:38px}
 .d-sec h3{font-size:22px;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid var(--sel-soft)}
+.d-in-large-headings .d-sec h3{font-size:28px;line-height:1.35}
 .d-sec > p,.d-sec .rich{font-size:16px}
 .d-ai-usage .rich p{text-wrap:pretty;overflow-wrap:break-word}
 .d-sec > ul{padding-left:20px;font-size:16px}
@@ -208,6 +209,7 @@ a.d-file:hover{color:var(--sel)}
 .d-next:hover b{color:var(--sel)}
 
 @media (max-width:899px){
+  .d-in-large-headings .d-sec h3{font-size:26px}
   .d-meta{grid-template-columns:1fr 1fr}
   .d-hero{height:auto;aspect-ratio:16/10}
   .d-meta div{border-bottom:1px solid var(--grid)}

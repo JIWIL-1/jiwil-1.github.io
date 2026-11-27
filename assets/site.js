@@ -163,7 +163,7 @@
       ${ps.length > 1 ? `<div class="d-nav"><span class="d-count">${i + 1} / ${ps.length}</span>
       <button class="d-btn" data-go="${(i + ps.length - 1) % ps.length}">이전</button>
       <button class="d-btn" data-go="${n}">다음</button></div>` : ''}</div>
-    <article class="d-in">
+    <article class="d-in${p.largeSectionHeadings ? ' d-in-large-headings' : ''}">
       ${video || (leadImage ? `<a class="d-image" href="${esc(leadImage)}" target="_blank" rel="noopener" aria-label="${esc(p.title)} 이미지 원본 보기"><img src="${esc(leadImage)}" alt="${esc(p.title)} 대표 이미지" decoding="async"></a>` : '')}
       ${p.kicker ? `<div class="d-kicker">${esc(p.kicker)}</div>` : ''}
       <h2 class="d-title" id="d-title">${esc(p.title)}</h2>

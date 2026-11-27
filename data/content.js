@@ -332,7 +332,8 @@ window.PORTFOLIO_CONTENT = {
       ],
       "csvDetail": "<p>개발 담당자가 제공한 CSV 형식에 맞춰 최미나 루트의 대사와 상황, 선택지별 반응을 정리했습니다. 장면의 분위기와 행동에 맞춰 BGM·SFX를 입력하고, 이야기 흐름에 따라 배경음악과 효과음이 이어지도록 구성했습니다.</p>",
       "qaDetail": "<p>담당 루트의 선택지별 진행과 사운드·화면 전환을 확인하며 장면이 자연스럽게 이어지는지 검수했습니다. 플레이 중 발견한 오류와 어색한 연출, 특이사항을 팀에 전달했습니다.</p>",
-      "bodyBeforeLearned": true
+      "bodyBeforeLearned": true,
+      "largeSectionHeadings": true
     }
   ],
   "skills": {
