@@ -187,7 +187,7 @@ window.PORTFOLIO_CONTENT = {
       "kicker": "팀 프로젝트 · 2026.04",
       "summary": "연애 시뮬레이션",
       "cover": "uploads/20261126-153443-o644-professor-cover.webp",
-      "lead": "제미나이·클로드·챗GPT의 특징을 반영한 세 교수 캐릭터와 관계를 쌓는 Unity 비주얼 노벨",
+      "lead": "제미나이·클로드·챗GPT의 특징을 반영한 세 교수 캐릭터와 관계를 쌓는 비주얼 노벨",
       "meta": [
         {
           "label": "장르",
