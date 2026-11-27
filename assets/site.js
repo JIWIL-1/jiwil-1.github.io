@@ -144,6 +144,13 @@
     const sec = (title, inner) => inner ? `<div class="d-sec"><h3>${title}</h3>${inner}</div>` : '';
     const rich = h => (h && h.replace(/<[^>]*>/g, '').trim() || /<img/i.test(h || '')) ? `<div class="rich">${sanitize(h)}</div>` : '';
     const meta = filled(p.meta), tasks = filled(p.tasks), sys = filled(p.systems), res = filled(p.results), gal = filled(p.gallery), files = filled(p.files);
+    const fileFolders = filled(p.fileFolders).map(g => ({ ...g, files: filled(g.files).filter(f => PF.safeUrl(f.url)) })).filter(g => g.files.length);
+    const folderIcon = '<svg class="d-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l3 4h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="M3 7h10"/></svg>';
+    const folderHTML = fileFolders.map(g => `<details class="d-file-folder" name="project-${i}-attachments"><summary>${folderIcon}<span class="d-folder-name">${esc(g.name)}</span><span class="d-folder-count">${g.files.length}개</span><span class="d-folder-chevron" aria-hidden="true"></span></summary><div class="d-folder-contents">${g.files.map(f => `<a class="d-folder-file" href="${esc(PF.safeUrl(f.url))}" target="_blank" rel="noopener"><span>${esc(f.name)}</span><small>${esc(f.info)}</small></a>`).join('')}${PF.safeUrl(g.url) ? `<a class="d-folder-source" href="${esc(PF.safeUrl(g.url))}" target="_blank" rel="noopener">Drive에서 폴더 열기 <span aria-hidden="true">↗</span></a>` : ''}</div></details>`).join('');
+    const flatFileHTML = files.map(f => f.url
+      ? `<a class="d-file" href="${esc(PF.safeUrl(f.url))}" target="_blank" rel="noopener" download>${esc(f.name)}<small>${esc(f.info)}</small></a>`
+      : `<div class="d-file">${esc(f.name)}<small>${esc(f.info)}</small></div>`).join('');
+    const attachmentHTML = folderHTML || flatFileHTML;
     const video = videoHTML(p.video);
     // 영상이 없으면 첫 갤러리 이미지를 상세 상단에 표시합니다.
     const leadImage = video ? '' : PF.safeUrl(gal.shift(), true);
@@ -169,7 +176,7 @@
       <h2 class="d-title" id="d-title">${esc(p.title)}</h2>
       ${p.lead ? `<p class="d-lead">${esc(p.lead)}</p>` : ''}
       ${meta.length ? `<dl class="d-meta" style="--n:${Math.min(meta.length, 5)}">${meta.map(m => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join('')}</dl>` : ''}
-      <div class="d-grid"${files.length ? '' : ' style="grid-template-columns:1fr"'}><div>
+      <div class="d-grid"${attachmentHTML ? '' : ' style="grid-template-columns:1fr"'}><div>
         ${sec('기획 의도', rich(p.intent))}
         ${sec('담당 업무', taskFigure + (p.taskDetail ? `<div class="d-task-detail">${rich(p.taskDetail)}</div>` : '') + scenarioSection + backgroundSection + csvSection + qaSection + (tasks.length ? `<ul>${tasks.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''))}
         ${sec('핵심 시스템', sys.length ? `<div class="d-sys">${sys.map(x => `<div><b>${esc(x.title)}</b><span>${esc(x.desc)}</span></div>`).join('')}</div>` : '')}
@@ -180,9 +187,7 @@
         ${p.bodyBeforeLearned ? '' : bodySection}
         ${sec('이미지', gal.length ? `<div class="d-gal">${gal.map((g, k) => `<a href="${esc(PF.safeUrl(g, true))}" target="_blank" rel="noopener">${ph(g, i, p.title + ' 이미지 ' + (k + 1))}</a>`).join('')}</div>` : '')}
       </div>
-      ${files.length ? `<aside class="d-side"><div class="d-box"><h4>첨부 파일</h4>${files.map(f => f.url
-        ? `<a class="d-file" href="${esc(PF.safeUrl(f.url))}" target="_blank" rel="noopener" download>${esc(f.name)}<small>${esc(f.info)}</small></a>`
-        : `<div class="d-file">${esc(f.name)}<small>${esc(f.info)}</small></div>`).join('')}</div></aside>` : ''}
+      ${attachmentHTML ? `<aside class="d-side${fileFolders.length ? ' d-side-folders' : ''}" aria-label="첨부 파일"><div class="d-box"><h4>첨부 파일</h4>${attachmentHTML}</div></aside>` : ''}
       </div>
       ${ps.length > 1 ? `<button class="d-next" data-go="${n}">${ph(np.cover, n, '다음 프로젝트')}<div><small>다음 프로젝트</small><b>${esc(np.title)}</b></div></button>` : ''}
     </article>`;

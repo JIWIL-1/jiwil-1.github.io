@@ -226,56 +226,25 @@ window.PORTFOLIO_CONTENT = {
       "gallery": [
         "uploads/20261126-153443-o644-professor-cover.webp"
       ],
-      "files": [
-        {
-          "name": "플레이어 동선 + 배경 이미지 1차",
-          "info": "Google 문서",
-          "url": "https://docs.google.com/document/d/1UtXtMmrftNYcYpql0ASvQlFRkqGwzsdz/edit"
-        },
-        {
-          "name": "최미나 2일차 시나리오",
-          "info": "Google 문서",
-          "url": "https://docs.google.com/document/d/1fC4sTi64DXSMM2i3NIenhXU_lKHFHW2_/edit"
-        },
-        {
-          "name": "최미나 4일차 시나리오",
-          "info": "Google 문서",
-          "url": "https://docs.google.com/document/d/1Za6kYKtVUNHNFandeJpm_10qM62AMMCu/edit"
-        },
-        {
-          "name": "최미나 6일차 시나리오",
-          "info": "Google 문서",
-          "url": "https://docs.google.com/document/d/1ptk5tBvCaxzlFsS3lIPljiWtF17Dbxr0/edit"
-        },
-        {
-          "name": "최미나 7일차 시나리오",
-          "info": "Google 문서",
-          "url": "https://docs.google.com/document/d/1KgUjwBncCtG4Zz5agg8yRMufP5uQ3CAq/edit"
-        },
-        {
-          "name": "개인 회고록",
-          "info": "PDF",
-          "url": "https://drive.google.com/file/d/17SqV2sObP2pvhKIcGfjfY1NSNBUAWwzy/view"
-        }
-      ],
+      "files": [],
       "scenarioSamples": [
         {
           "src": "uploads/20261127-professor-scenario-day2-scene1.jpg",
           "alt": "최미나 2일차 시나리오 도입부: 공원에서 시작하는 만남",
           "label": "2일차",
-          "url": "https://docs.google.com/document/d/1fC4sTi64DXSMM2i3NIenhXU_lKHFHW2_/edit"
+          "url": "https://docs.google.com/document/d/1hYHw7dIZd7GoULPDN0IEKGg7uN1fHdDL/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
         },
         {
           "src": "uploads/20261127-professor-scenario-day4.jpg",
           "alt": "최미나 4일차 시나리오 도입부: 개인 전시실로 초대하는 메시지",
           "label": "4일차",
-          "url": "https://docs.google.com/document/d/1Za6kYKtVUNHNFandeJpm_10qM62AMMCu/edit"
+          "url": "https://docs.google.com/document/d/1tk4GegaewVgXlPa2uhWAc_Yi6bt0qOnZ/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
         },
         {
           "src": "uploads/20261127-professor-scenario-day6.jpg",
           "alt": "최미나 6일차 시나리오 도입부: 늦은 저녁 공원 데이트",
           "label": "6일차",
-          "url": "https://docs.google.com/document/d/1ptk5tBvCaxzlFsS3lIPljiWtF17Dbxr0/edit"
+          "url": "https://docs.google.com/document/d/1-o3VER-leMSZWs9OiV_rwI_aMyGMbceM/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
         }
       ],
       "scenarioDetail": "<p>전달받은 인물의 성격과 관계도 표를 바탕으로, 서로를 알아가다 가치관 차이로 갈등을 겪고 관계를 회복하는 흐름을 구성했습니다. 상황과 대사에 개성과 감정 변화를 담고, 선택지별 반응과 호감도 수치로 진행 분기를 구체화했습니다.</p>",
@@ -309,7 +278,7 @@ window.PORTFOLIO_CONTENT = {
           "alt": "최미나 2일차 대사와 배경·BGM·효과음 데이터 원본 캡처",
           "width": 872,
           "height": 506,
-          "sourceUrl": "https://docs.google.com/spreadsheets/d/1a1RdIROBnXR9Y3BvzQqhjFIE8tGfIr0m/edit"
+          "sourceUrl": "https://docs.google.com/spreadsheets/d/1_wNMgfsUSo8C-X7KA402Km10brk8C7b1/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
         },
         {
           "src": "uploads/20261127-professor-csv-day4.jpg",
@@ -318,7 +287,7 @@ window.PORTFOLIO_CONTENT = {
           "alt": "최미나 4일차 대사와 배경·BGM·효과음 데이터 원본 캡처",
           "width": 848,
           "height": 492,
-          "sourceUrl": "https://docs.google.com/spreadsheets/d/11ca-gF5SWq93mZ3wDkqCI--LAYkYm_7W/edit"
+          "sourceUrl": "https://docs.google.com/spreadsheets/d/1_q8InRz2lNcuzzWiMq4hIDhkFA1Pboqp/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
         },
         {
           "src": "uploads/20261127-professor-csv-day6.jpg",
@@ -327,13 +296,98 @@ window.PORTFOLIO_CONTENT = {
           "alt": "최미나 6일차 대사와 배경·BGM·효과음 데이터 원본 캡처",
           "width": 882,
           "height": 512,
-          "sourceUrl": "https://docs.google.com/spreadsheets/d/1HuXyVf9mRJbs-tXt4AUyWFNP7XDngLqV/edit"
+          "sourceUrl": "https://docs.google.com/spreadsheets/d/11YAa4mPpJdWswPvrz4YmlxRoi9nohxmr/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
         }
       ],
       "csvDetail": "<p>개발 담당자가 제공한 CSV 형식에 맞춰 최미나 루트의 대사와 상황, 선택지별 반응을 정리했습니다. 장면의 분위기와 행동에 맞춰 BGM·SFX를 입력하고, 이야기 흐름에 따라 배경음악과 효과음이 이어지도록 구성했습니다.</p>",
       "qaDetail": "<p>담당 루트의 선택지별 진행과 사운드·화면 전환을 확인하며 장면이 자연스럽게 이어지는지 검수했습니다. 플레이 중 발견한 오류와 어색한 연출, 특이사항을 팀에 전달했습니다.</p>",
       "bodyBeforeLearned": true,
-      "largeSectionHeadings": true
+      "largeSectionHeadings": true,
+      "fileFolders": [
+        {
+          "name": "시나리오",
+          "url": "https://drive.google.com/drive/folders/1SakPJtd6AIszfAVD7VlEBtVibqQmLSwW",
+          "files": [
+            {
+              "name": "최미나 2일차",
+              "info": "DOCX",
+              "url": "https://docs.google.com/document/d/1hYHw7dIZd7GoULPDN0IEKGg7uN1fHdDL/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "최미나 4일차",
+              "info": "DOCX",
+              "url": "https://docs.google.com/document/d/1tk4GegaewVgXlPa2uhWAc_Yi6bt0qOnZ/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "최미나 6일차",
+              "info": "DOCX",
+              "url": "https://docs.google.com/document/d/1-o3VER-leMSZWs9OiV_rwI_aMyGMbceM/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "최미나 7일차",
+              "info": "DOCX",
+              "url": "https://docs.google.com/document/d/19ZWeqmO4kfOtIaVOOZ87QSwqVjmvQlT0/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            }
+          ]
+        },
+        {
+          "name": "CSV",
+          "url": "https://drive.google.com/drive/folders/1pmBp4ZWXgrwTGs7RPwMBJ9kcx_qTvrN3",
+          "files": [
+            {
+              "name": "최미나 2일차",
+              "info": "XLSX",
+              "url": "https://docs.google.com/spreadsheets/d/1_wNMgfsUSo8C-X7KA402Km10brk8C7b1/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "최미나 4일차",
+              "info": "XLSX",
+              "url": "https://docs.google.com/spreadsheets/d/1_q8InRz2lNcuzzWiMq4hIDhkFA1Pboqp/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "최미나 6일차",
+              "info": "XLSX",
+              "url": "https://docs.google.com/spreadsheets/d/11YAa4mPpJdWswPvrz4YmlxRoi9nohxmr/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "최미나 7일차",
+              "info": "XLSX",
+              "url": "https://docs.google.com/spreadsheets/d/1zV5AyCkCqmmbfaHcFJcTWRybpylT83Zp/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "최미나 벚꽃 데이트·고백",
+              "info": "XLSX",
+              "url": "https://docs.google.com/spreadsheets/d/1uiFgDvYB_ofHHCZIrzmZ4K5MhrR7HWtC/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "프롤로그",
+              "info": "XLSX",
+              "url": "https://docs.google.com/spreadsheets/d/1cZ1DgQW8IRr3CM4fRWGG4nVlkTCgiUkA/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            }
+          ]
+        },
+        {
+          "name": "공통기획서",
+          "url": "https://drive.google.com/drive/folders/1mE0EV0rmmngnZeWPE9sN-dycqHdSWg6t",
+          "files": [
+            {
+              "name": "비주얼 노벨 전체 기획서",
+              "info": "Google 문서",
+              "url": "https://docs.google.com/document/d/1kOBLTbuu3tvJE_6-NXm4b1yAB3pbq2eFADJklzR1Gqo/edit?usp=drivesdk"
+            },
+            {
+              "name": "프로젝트 제안서",
+              "info": "DOCX",
+              "url": "https://docs.google.com/document/d/1W5zv86gnW6OXAZt8v2NxzQ_yZG6tBxhn/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            },
+            {
+              "name": "플레이어 동선·배경 이미지",
+              "info": "DOCX",
+              "url": "https://docs.google.com/document/d/1QSla2cIaZsJ4qeWbR_PilrfrZreGawEv/edit?usp=drivesdk&ouid=111428195435914570876&rtpof=true&sd=true"
+            }
+          ]
+        }
+      ]
     }
   ],
   "skills": {
