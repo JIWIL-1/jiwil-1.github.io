@@ -144,13 +144,16 @@
     const sec = (title, inner) => inner ? `<div class="d-sec"><h3>${title}</h3>${inner}</div>` : '';
     const rich = h => (h && h.replace(/<[^>]*>/g, '').trim() || /<img/i.test(h || '')) ? `<div class="rich">${sanitize(h)}</div>` : '';
     const meta = filled(p.meta), tasks = filled(p.tasks), sys = filled(p.systems), res = filled(p.results), gal = filled(p.gallery), files = filled(p.files);
+    const video = videoHTML(p.video);
+    // 영상이 없으면 첫 갤러리 이미지를 상세 상단에 표시합니다.
+    const leadImage = video ? '' : PF.safeUrl(gal.shift(), true);
     return `
     <div class="d-bar"><button class="d-btn" data-close>목록으로</button>
       ${ps.length > 1 ? `<div class="d-nav"><span class="d-count">${i + 1} / ${ps.length}</span>
       <button class="d-btn" data-go="${(i + ps.length - 1) % ps.length}">이전</button>
       <button class="d-btn" data-go="${n}">다음</button></div>` : ''}</div>
     <article class="d-in">
-      ${videoHTML(p.video)}
+      ${video || (leadImage ? `<a class="d-image" href="${esc(leadImage)}" target="_blank" rel="noopener" aria-label="${esc(p.title)} 이미지 원본 보기"><img src="${esc(leadImage)}" alt="${esc(p.title)} 대표 이미지" decoding="async"></a>` : '')}
       ${p.kicker ? `<div class="d-kicker">${esc(p.kicker)}</div>` : ''}
       <h2 class="d-title" id="d-title">${esc(p.title)}</h2>
       ${p.lead ? `<p class="d-lead">${esc(p.lead)}</p>` : ''}
