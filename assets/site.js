@@ -52,7 +52,7 @@
       </section>
       ${R()}
       <section class="about-intro" id="story" data-f="=기획(재미, 전달, 검증)" data-ref="A2" data-tab="intro" aria-labelledby="story-title">
-        <h2 id="story-title">소개</h2><div class="rich">${sanitize(ab.body)}</div>
+        <h2 class="cell sec-head" id="story-title">소개</h2><div class="rich">${sanitize(ab.body)}</div>
       </section>
       ${R()}
       <div class="cell sec-head" id="projects" data-f="=FILTER(프로젝트, 완성=TRUE)" data-ref="A3"><h2>프로젝트</h2></div>

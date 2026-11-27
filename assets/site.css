@@ -100,9 +100,8 @@ td:last-child,th:last-child{border-right:0}
 .ti-mono{display:grid;place-items:center;color:#fff;font-size:16px;font-weight:700;background:hsl(var(--h) 42% 40%)}
 
 #intro,#story,#projects,#skills,#about,#contact{scroll-margin-top:96px}
-.about-intro{display:grid;grid-template-columns:140px minmax(0,1fr);gap:32px;padding:32px 36px;border-bottom:1px solid var(--grid)}
-.about-intro > h2{color:var(--sel)}
-.about-intro > .rich{max-width:780px;font-family:var(--hero-font);font-size:17px;line-height:1.85;letter-spacing:-.015em}
+.about-intro{border-bottom:1px solid var(--grid)}
+.about-intro > .rich{max-width:852px;padding:32px 36px;font-family:var(--hero-font);font-size:17px;line-height:1.85;letter-spacing:-.015em}
 .about-intro > .rich p{text-wrap:balance}
 .about-intro > .rich p:first-child{font-size:20px;font-weight:600;line-height:1.6;letter-spacing:-.025em}
 .about-intro > .rich p+p{margin-top:20px}
@@ -202,8 +201,7 @@ a.d-file:hover{color:var(--sel)}
   .ptiles{grid-template-columns:1fr}.ptile{border-right:0}
   .ptile:hover,.ptile:focus-visible{transform:none}
   .tools{grid-template-columns:1fr}.tcat{grid-column:auto!important}
-  .about-intro{grid-template-columns:1fr;gap:18px;padding:26px 24px}
-  .about-intro > .rich{font-size:16px}
+  .about-intro > .rich{padding:26px 24px;font-size:16px}
   .about-intro > .rich p:first-child{font-size:19px}
   .profile-grid{grid-template-columns:1fr}
   .profile-grid > section{border-right:0;border-bottom:1px solid var(--grid)}
