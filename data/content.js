@@ -285,7 +285,7 @@ window.PORTFOLIO_CONTENT = {
       ],
       "scenarioSamples": [
         {
-          "src": "uploads/20261127-professor-scenario-day2.jpg",
+          "src": "uploads/20261127-professor-scenario-day2-scene1.jpg",
           "alt": "최미나 2일차 시나리오 도입부: 공원에서 시작하는 만남",
           "label": "2일차",
           "url": "https://docs.google.com/document/d/1fC4sTi64DXSMM2i3NIenhXU_lKHFHW2_/edit"
@@ -303,7 +303,7 @@ window.PORTFOLIO_CONTENT = {
           "url": "https://docs.google.com/document/d/1ptk5tBvCaxzlFsS3lIPljiWtF17Dbxr0/edit"
         }
       ],
-      "scenarioDetail": "<p>최미나의 2·4·6·7일차 시나리오를 맡아 장면별 상황과 대사, 행동을 작성했습니다.<br>공원 수업과 전시 준비를 함께하며 서로를 알아가고 가까워지는 과정을 구성했습니다.<br>AI 예술을 둘러싼 갈등이 서로의 관점을 이해하는 대화로 이어지도록 했습니다.<br>2·4일차에는 선택지별 반응과 호감도 수치를 정리해 대화와 진행 분기를 구체화했습니다.</p>"
+      "scenarioDetail": "<p>전달받은 인물의 성격 설정과 관계도 표를 바탕으로 최미나 루트 시나리오를 작성했습니다.<br>서로를 알아가는 과정에서 성격과 가치관이 드러나도록 상황과 대사를 구성했습니다.<br>인물 간의 차이가 갈등으로 이어지고, 대화를 통해 서로 이해하며 관계를 회복하도록 했습니다.<br>선택지별 반응과 호감도 수치를 정리해 대화와 진행 분기를 구체화했습니다.</p>"
     }
   ],
   "skills": {
