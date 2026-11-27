@@ -185,6 +185,8 @@ td:last-child,th:last-child{border-right:0}
 .d-background-grid figcaption{margin-top:8px;text-align:center;word-break:keep-all;color:var(--muted)}
 .d-background-grid figcaption b{display:block;font-size:14px;font-weight:600}
 .d-background-grid figcaption span{display:block;font-size:12px}
+.d-backgrounds .d-task-detail p{text-wrap:wrap}
+@media (max-width:1099px){.d-backgrounds .d-task-detail br{display:none}.d-backgrounds .d-task-detail p{text-wrap:pretty}}
 .d-sys{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .d-sys div{border:1px solid var(--grid);background:var(--head);padding:16px 18px}
 .d-sys b{display:block;font-size:16px;margin-bottom:2px}
