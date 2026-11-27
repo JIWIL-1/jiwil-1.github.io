@@ -409,7 +409,7 @@ window.PORTFOLIO_CONTENT = {
   },
   "contact": {
     "email": "jun991014@gmail.com",
-    "note": "© 2026 이준엽. 직접 작성한 글과 기획 문서의 저작권은 이준엽에게 있으며, 외부 자료·에셋·로고·상표의 권리는 각 권리자에게 있습니다.",
+    "note": "© 2026 이준엽 · 외부 자료는 각 권리자 소유",
     "links": [
       {
         "label": "GitHub",
