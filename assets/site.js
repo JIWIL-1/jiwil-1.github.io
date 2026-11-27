@@ -21,7 +21,7 @@
     const R = () => `<div class="row-n">${row++}</div>`;
     const tiles = ps.map((p, i) => `
       <a class="ptile" href="#project-${i + 1}" data-project="${i}" aria-label="${esc(p.title)} 상세 보기" aria-haspopup="dialog" aria-controls="detail">
-        <span class="ref">${String.fromCharCode(66 + (i % 3) * 2)}${3 + Math.floor(i / 3)}</span>
+        <span class="ref">${String.fromCharCode(66 + (i % 3) * 2)}${4 + Math.floor(i / 3)}</span>
         <div class="pt-cover">
           ${ph(p.cover, i, p.cover ? p.title : '프로젝트 이미지')}
           <span class="pt-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -51,22 +51,31 @@
         </div>${s.photo ? `<figure class="hero-photo"><img src="${esc(s.photo)}" alt="${esc(s.name || '')} 사진"></figure>` : ''}</div>
       </section>
       ${R()}
-      <div class="cell sec-head" id="projects" data-f="=FILTER(프로젝트, 완성=TRUE)" data-ref="A2"><h2>프로젝트</h2></div>
+      <section class="about-intro" id="story" data-f="=기획(재미, 전달, 검증)" data-ref="A2" data-tab="intro" aria-labelledby="story-title">
+        <h2 id="story-title">소개</h2><div class="rich">${sanitize(ab.body)}</div>
+      </section>
+      ${R()}
+      <div class="cell sec-head" id="projects" data-f="=FILTER(프로젝트, 완성=TRUE)" data-ref="A3"><h2>프로젝트</h2></div>
       ${R()}
       <div class="ptiles">${tiles}</div>
       ${R()}
-      <div class="cell sec-head" id="skills" data-f="=COUNTA(사용가능도구)" data-ref="A4"><h2>사용 가능 도구</h2>${sk.note ? `<small>${esc(sk.note)}</small>` : ''}<a class="tool-credits" href="assets/tool-logos/credits.html" target="_blank" rel="noopener">로고 출처</a></div>
+      <div class="cell sec-head" id="skills" data-f="=COUNTA(사용가능도구)" data-ref="A5"><h2>사용 가능 도구</h2>${sk.note ? `<small>${esc(sk.note)}</small>` : ''}<a class="tool-credits" href="assets/tool-logos/credits.html" target="_blank" rel="noopener">로고 출처</a></div>
       ${R()}
       <div class="tools" style="--n:${tCols}">${skills}</div>
       ${R()}
-      <div class="cell sec-head" id="about" data-f="=CONCAT(이력, 생각)" data-ref="A6"><h2>소개</h2></div>
-      ${R()}
-      <div class="about"><div class="rich">${sanitize(ab.body)}</div><div><dl>${facts}</dl></div></div>
-      ${R()}
-      <div class="contact" id="contact" data-f="=HYPERLINK(&quot;mailto:${esc(ct.email || '')}&quot;)" data-ref="A8">
-        ${ct.email ? `<a class="mail" href="mailto:${esc(ct.email)}">${esc(ct.email)}</a>` : ''}
-        ${ct.note ? `<p>${esc(ct.note)}</p>` : ''}
-        ${links ? `<div class="links">${links}</div>` : ''}
+      <div class="profile-grid">
+        <section class="profile-facts" id="about" data-f="=CONCAT(학력, 교육, 관심장르)" data-ref="A7" aria-labelledby="facts-title">
+          <h2 class="cell sec-head" id="facts-title">이력</h2>
+          <div class="profile-body"><dl>${facts}</dl></div>
+        </section>
+        <section class="contact" id="contact" data-f="=HYPERLINK(&quot;mailto:${esc(ct.email || '')}&quot;)" data-ref="E7" aria-labelledby="contact-title">
+          <h2 class="cell sec-head" id="contact-title">연락</h2>
+          <div class="profile-body">
+            ${ct.email ? `<a class="mail" href="mailto:${esc(ct.email)}">${esc(ct.email)}</a>` : ''}
+            ${ct.note ? `<p>${esc(ct.note)}</p>` : ''}
+            ${links ? `<div class="links">${links}</div>` : ''}
+          </div>
+        </section>
       </div>`;
     $('#val').textContent = s.formula || '';
     watchSections();
@@ -76,14 +85,42 @@
   function watchSections() {
     const secs = [...document.querySelectorAll('[data-f]')];
     const tabs = [...document.querySelectorAll('#tabs a')];
-    const io = new IntersectionObserver(es => es.forEach(e => {
-      if (!e.isIntersecting) return;
-      const i = secs.indexOf(e.target);
-      $('#val').textContent = e.target.dataset.f;
-      $('#ref').textContent = e.target.dataset.ref;
-      tabs.forEach((t, j) => t.classList.toggle('on', j === i));
-    }), { rootMargin: '-40% 0px -55% 0px' });
-    secs.forEach(s => io.observe(s));
+    const activate = section => {
+      $('#val').textContent = section.dataset.f;
+      $('#ref').textContent = section.dataset.ref;
+      const id = section.dataset.tab || section.id;
+      tabs.forEach(t => t.classList.toggle('on', t.hash === '#' + id));
+    };
+    const updateFromScroll = () => {
+      const positions = secs.map(section => ({ section, top: section.getBoundingClientRect().top }));
+      const passed = positions.filter(p => p.top <= innerHeight * .4);
+      const atBottom = scrollY + innerHeight >= document.documentElement.scrollHeight - 4;
+      const current = atBottom ? positions[positions.length - 1] : passed[passed.length - 1] || positions[0];
+      const candidates = atBottom
+        ? positions.filter(p => p.top < innerHeight - 48 && p.section.getBoundingClientRect().bottom > 96)
+        : positions.filter(p => Math.abs(p.top - current.top) < 1);
+      const selected = candidates.find(p => '#' + p.section.id === location.hash) || current;
+      activate(selected.section);
+    };
+    let framePending = false;
+    window.addEventListener('scroll', () => {
+      if (framePending) return;
+      framePending = true;
+      requestAnimationFrame(() => {
+        framePending = false;
+        updateFromScroll();
+      });
+    }, { passive: true });
+    window.addEventListener('resize', updateFromScroll);
+    updateFromScroll();
+    tabs.forEach(t => t.addEventListener('click', () => {
+      const section = secs.find(s => '#' + s.id === t.hash);
+      if (section) activate(section);
+    }));
+    window.addEventListener('hashchange', () => {
+      const section = secs.find(s => '#' + s.id === location.hash);
+      if (section) activate(section);
+    });
   }
 
   /* ----- 프로젝트 상세 ----- */

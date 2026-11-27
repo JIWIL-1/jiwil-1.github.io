@@ -99,13 +99,17 @@ td:last-child,th:last-child{border-right:0}
 .tool-credits{margin-left:auto;font-size:12px;color:var(--muted);text-underline-offset:3px}
 .ti-mono{display:grid;place-items:center;color:#fff;font-size:16px;font-weight:700;background:hsl(var(--h) 42% 40%)}
 
-.about{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
-.about > div{padding:32px 36px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid)}
-.about > div:last-child{border-right:0}
-.about > .rich{font-family:var(--hero-font);font-size:17px;line-height:1.85;letter-spacing:-.015em}
-.about > .rich p{text-wrap:balance}
-.about > .rich p:first-child{font-size:20px;font-weight:600;line-height:1.6;letter-spacing:-.025em}
-.about > .rich p+p{margin-top:20px}
+#intro,#story,#projects,#skills,#about,#contact{scroll-margin-top:96px}
+.about-intro{display:grid;grid-template-columns:140px minmax(0,1fr);gap:32px;padding:32px 36px;border-bottom:1px solid var(--grid)}
+.about-intro > h2{color:var(--sel)}
+.about-intro > .rich{max-width:780px;font-family:var(--hero-font);font-size:17px;line-height:1.85;letter-spacing:-.015em}
+.about-intro > .rich p{text-wrap:balance}
+.about-intro > .rich p:first-child{font-size:20px;font-weight:600;line-height:1.6;letter-spacing:-.025em}
+.about-intro > .rich p+p{margin-top:20px}
+.profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:1px solid var(--grid)}
+.profile-grid > section{min-width:0;border-right:1px solid var(--grid)}
+.profile-grid > section:last-child{border-right:0}
+.profile-body{padding:32px 36px}
 .rich p+p,.rich p+ul,.rich ul+p{margin-top:12px}
 .rich h3{font-size:20px;margin:20px 0 8px}
 .rich h4{font-size:17px;margin:16px 0 6px}
@@ -113,12 +117,11 @@ td:last-child,th:last-child{border-right:0}
 .rich blockquote{border-left:3px solid var(--sel);padding:4px 0 4px 14px;color:var(--muted);margin:12px 0}
 .rich img{display:block;margin:16px 0;border:1px solid var(--grid)}
 .rich a{color:var(--sel)}
-.about dl{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px 16px;font-size:15px;line-height:1.8}
-.about dt{color:var(--muted)}
+.profile-facts dl{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px 16px;font-size:15px;line-height:1.8}
+.profile-facts dt{color:var(--muted)}
 
-.contact{padding:36px 32px}
-.contact a.mail{font-size:clamp(22px,3vw,34px);font-weight:700;text-decoration:none;border-bottom:3px solid var(--sel)}
-.contact p{color:var(--muted);margin-top:10px}
+.contact a.mail{font-size:clamp(22px,3vw,34px);font-weight:700;text-decoration:none;border-bottom:3px solid var(--sel);overflow-wrap:anywhere}
+.contact p{color:var(--muted);margin-top:14px;font-size:14px;line-height:1.8}
 .contact .links{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
 .contact .links a{color:var(--sel);font-weight:500}
 
@@ -199,14 +202,18 @@ a.d-file:hover{color:var(--sel)}
   .ptiles{grid-template-columns:1fr}.ptile{border-right:0}
   .ptile:hover,.ptile:focus-visible{transform:none}
   .tools{grid-template-columns:1fr}.tcat{grid-column:auto!important}
-  .about{grid-template-columns:1fr}.about > div{padding:26px 24px;border-right:0}
-  .about > .rich{font-size:16px}
-  .about > .rich p:first-child{font-size:19px}
+  .about-intro{grid-template-columns:1fr;gap:18px;padding:26px 24px}
+  .about-intro > .rich{font-size:16px}
+  .about-intro > .rich p:first-child{font-size:19px}
+  .profile-grid{grid-template-columns:1fr}
+  .profile-grid > section{border-right:0;border-bottom:1px solid var(--grid)}
+  .profile-grid > section:last-child{border-bottom:0}
+  .profile-body{padding:26px 24px}
   .hide-m{display:none}
   .cell{padding:12px 14px}
 }
 /* 데스크톱(16:9 기준 1280px 화면)을 비율 그대로 줄여서 보여줄 때 글자 크기 고정 */
-@media (min-width:900px){.hero h1{font-size:42px}.detail .d-title{font-size:64px}.contact a.mail{font-size:34px}}
+@media (min-width:900px){.hero h1{font-size:42px}.detail .d-title{font-size:64px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.ptile:hover,.ptile:focus-visible{transform:none}}
 @media (max-width:520px){.hero-inner.has-photo{grid-template-columns:1fr}.hero-photo{order:-1;width:110px}}
 
