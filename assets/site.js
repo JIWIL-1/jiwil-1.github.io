@@ -156,6 +156,8 @@
     const csvSamples = filled(p.csvSamples).filter(x => PF.safeUrl(x.src, true));
     const csvSection = csvSamples.length ? `<section class="d-csv" aria-labelledby="csv-title"><h4 id="csv-title">시나리오 CSV 변환 및 사운드 데이터 입력</h4><div class="d-csv-grid">${csvSamples.map(x => `<figure><a href="${esc(PF.safeUrl(x.src, true))}" target="_blank" rel="noopener" aria-label="최미나 ${esc(x.label)} 데이터 캡처 원본 보기"><img src="${esc(PF.safeUrl(x.src, true))}" alt="${esc(x.alt)}" width="${esc(x.width)}" height="${esc(x.height)}" loading="lazy" decoding="async"></a><figcaption><b>${esc(x.label)}</b><span>${esc(x.scene)}</span></figcaption></figure>`).join('')}</div>${p.csvDetail ? `<div class="d-task-detail">${rich(p.csvDetail)}</div>` : ''}</section>` : '';
     const qaSection = p.qaDetail ? `<section class="d-qa" aria-labelledby="qa-title"><h4 id="qa-title">선택지 및 연출 QA</h4><div class="d-task-detail">${rich(p.qaDetail)}</div></section>` : '';
+    const bodyContent = rich(p.body);
+    const bodySection = bodyContent ? `<div class="d-sec">${bodyContent}</div>` : '';
     return `
     <div class="d-bar"><button class="d-btn" data-close>목록으로</button>
       ${ps.length > 1 ? `<div class="d-nav"><span class="d-count">${i + 1} / ${ps.length}</span>
@@ -173,8 +175,9 @@
         ${sec('핵심 시스템', sys.length ? `<div class="d-sys">${sys.map(x => `<div><b>${esc(x.title)}</b><span>${esc(x.desc)}</span></div>`).join('')}</div>` : '')}
         ${sec('결과', res.length ? `<div class="d-nums">${res.map(x => `<div><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join('')}</div>` : '')}
         ${p.aiUsage != null ? `<div class="d-sec d-ai-usage"><h3>AI 활용</h3>${rich(p.aiUsage)}</div>` : ''}
+        ${p.bodyBeforeLearned ? bodySection : ''}
         ${sec('배운 점', rich(p.learned))}
-        ${rich(p.body) ? `<div class="d-sec">${rich(p.body)}</div>` : ''}
+        ${p.bodyBeforeLearned ? '' : bodySection}
         ${sec('이미지', gal.length ? `<div class="d-gal">${gal.map((g, k) => `<a href="${esc(PF.safeUrl(g, true))}" target="_blank" rel="noopener">${ph(g, i, p.title + ' 이미지 ' + (k + 1))}</a>`).join('')}</div>` : '')}
       </div>
       ${files.length ? `<aside class="d-side"><div class="d-box"><h4>첨부 파일</h4>${files.map(f => f.url
