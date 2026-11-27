@@ -170,6 +170,7 @@ td:last-child,th:last-child{border-right:0}
 .d-task-detail .rich h4:first-child{margin-top:0}
 .d-scenarios{margin-top:32px}
 .d-scenarios h4{font-size:18px;margin-bottom:12px}
+.d-task-heading::before,.d-scenarios h4::before{content:"";display:inline-block;width:7px;height:7px;margin-right:9px;vertical-align:3px;background:var(--sel)}
 .d-task-detail p{text-wrap:balance}
 .d-scenario-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
 .d-scenario-grid figure{min-width:0;margin:0}
